@@ -1,0 +1,39 @@
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .animatedIn {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+  }
+  
+  .animatedOut {
+    animation-name: fadeOut;
+    animation-duration: 3s;
+  }
+  .pageIn {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+  }
+  .pageOut {
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
+  }
+  

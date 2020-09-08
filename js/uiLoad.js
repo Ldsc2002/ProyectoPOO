@@ -1,7 +1,7 @@
 "use strict";
 
 function navigatePage(load) {
-    let current = ["#main", "#help"];
+    let current = ["#main", "#help", "#questions"];
     let navigateTo = document.querySelector(load);
     let navigateIndex = current.findIndex(function(element) {
         return element === load;

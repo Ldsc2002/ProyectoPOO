@@ -7,45 +7,176 @@
         <title>WIP</title>
 
         <!-- Materialize -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons">    
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
 
         <link rel="stylesheet" href="index.css">
-        <script src="js/uiLoad.js"></script>
     </head>
 
     <body>
         <header>
-
             <nav>
-                <div class="nav-wrapper teal">
-                    <a href="#" class="brand-logo right">Logo</a>
+                <div class="nav-wrapper blue-grey">
+                    <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large"><i class="material-icons">menu</i></a>
+
+                    <a href="#" class="brand-logo right">WIP</a>
                     <ul id="nav-mobile" class="left hide-on-med-and-down">
-                        <li><a href="sass.html">Sass</a></li>
-                        <li><a href="badges.html">Components</a></li>
-                        <li><a href="collapsible.html">JavaScript</a></li>
+                        <li><a href="#" onclick="navigatePage('#main')">Página Principal</a></li>
+                        <li><a href="#" onclick="navigatePage('#help')">Instrucciones</a></li>
                     </ul>
                 </div>
             </nav>
-
-            <ul id="slide-out" class="sidenav">
-                <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-            </ul>
-
-            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                
-        </header>
             
-           
-        </div>
-    </body>
+            <!--Mobile sidenav-->
+            <ul id="slide-out" class="sidenav">
+                <img src="E30.jpg" style="width: 100%; height: auto;">
+                <li><a href="#" class="sidenav-close" onclick="navigatePage('#main')"><i class="material-icons" >home</i>Página Principal</a></li>
+                <li><a href="#" class="sidenav-close" onclick="navigatePage('#help')"><i class="material-icons" >help</i>Instrucciones</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="subheader">Materias</a></li>
+                <li><a class="waves-effect sidenav-close" onclick="navigatePage('#questions')" href="#">Materia 1</a></li>
+                <li><a class="waves-effect sidenav-close" href="#">Materia 2</a></li>
+            </ul>
+        </header>
+
+        <div class="container" id="main">
+            <div class="row" style="margin-top: 20px">
+                <div class="col s12 m8 offset-m2">
+                    <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">TÍTULO</span>
+                        <p>TEXTO DE BIENVENIDA</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" onclick="navigatePage('#help')">LINK A INSTRUCCIONES</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
     
-    <script>
+            <div class="row">
+                <div class="col s12 m8 offset-m2">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="E30.jpg">
+                            <span class="card-title">SELECCIÓN DE MATERIA</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Selecciona una materia para empezar a aprender!</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" onclick="navigatePage('#questions')">MATERÍA 1</a>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">MATERÍA 2</a>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">MATERÍA 3</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="help" style="display: none;">
+            <div class="row" style="margin-top: 20px">
+                <div class="col s12 m8 offset-m2">
+                    <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Instrucciones</span>
+                        <p>Lorem ipsum</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m8 offset-m2">
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header">First</div>
+                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">Second</div>
+                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">Third</div>
+                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+
+        <div class="container" id="questions" style="display: none;">
+            <div class="row" style="margin-top: 20px">
+                <div class="col s12 m8 offset-m2">
+                    <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title" id="materiaOut">MATERIA</span>
+                        <p id="preguntaOut">PREGUNTA</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m8 offset-m2">
+                    <div class="card-panel">
+                        <form action="#">
+                            <p>
+                                <label>
+                                    <input name="group1" class="with-gap" type="radio"/>
+                                    <span class="black-text">Opción 1</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input name="group1" class="with-gap" type="radio"/>
+                                    <span class="black-text">Opción 2</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input name="group1" class="with-gap" type="radio"/>
+                                    <span class="black-text">Opción 3</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input name="group1" class="with-gap" type="radio"/>
+                                    <span class="black-text">Opción 4</span>
+                                </label>
+                            </p>
+                        </form>
+                        <div class="center-align" style="margin-top: 20px; margin-bottom: 10px;">
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <!--Materialize-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <script src="js/uiLoad.js"></script>
+        
+        <script>
         document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems, options);
-    });
-    </script>
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems);
+        });
+        </script>
+
+    </body>
 
 </html>
