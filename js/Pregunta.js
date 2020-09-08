@@ -1,11 +1,23 @@
+/**********************************************
+Programación orientada a objetos
+Pregunta.js
+Autores: 
+Luis Santos: 20226
+Paola Contreras: 20213
+José Pablo Díaz: 20396
+Jóse Lucero: 20306
+Diego Córdova: 20212
 
+Catedrático: Tomás Gálvez
+
+Clase Pregunta
+**********************************************/
 
 // Clase Pregunta
 class Pregunta{
 
     /*  Atributos   */
 
-    // String materia: identifica de que materia es la pregunta
     // Array Respuesta: Guarda la respuesta correcta a la pregunta
     // Array pregunta: Guarda Pregunta textual
     // Array incorrect: Array de respuestas erróneas
@@ -22,7 +34,6 @@ class Pregunta{
             var preguntas = ["4 - 2", "3 x 3", "(7 + 2) - 8", "5 x 1", "7 x 4"];
 
             // Se asigna respuesta correcta, materia y pregunta según los parámetros dados
-            this.materia = "Matematica";
             this.pregunta = ("Resuelva la siguiente operación matemática: " + preguntas[index]);
             this.respuesta = respuestas[index];
             
@@ -126,7 +137,7 @@ class Pregunta{
                 this.incorrect = ["mamífero", "ovíparo", "herbívoro"]; // Se asignan las respuestas incorrectas segun la pregunta
             } 
         }
-   }
+    }
 
    /* Getters   */
 

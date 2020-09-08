@@ -1,10 +1,24 @@
+/**********************************************
+Programación orientada a objetos
+validar.js
+Autores: 
+Luis Santos: 20226
+Paola Contreras: 20213
+José Pablo Díaz: 20396
+Jóse Lucero: 20306
+Diego Córdova: 20212
 
+Catedrático: Tomás Gálvez
+
+Clase Validar
+**********************************************/
 
 // Clase Validar
 class Validar {
 
     /*  Atributos   */
 
+    // String materia: identifica la materia
     // array preguntas: guarda las preguntas de la materia
     // int cont_preguntas: Lleva el conteo de las preguntas que se le hacen al usuario.
     // int cont_respuestas: int - lleva el conteo de respuestas correctas que da el usuario.
@@ -15,6 +29,19 @@ class Validar {
     constructor(materia){
 
         var preguntas = []; // Arraylist que guarda las preguntas temporalmente
+
+        if (materia == 1){
+
+            this.materia = "Matemática";
+
+        } else if (materia == 2){
+
+            this.materia = "Lenguaje";
+
+        } else if (materia == 3){
+
+            this.materia = "Ciencias Naturales";
+        }
 
         // Se crean 5 preguntas de la materia correspondiente 
         for (var i = 0; i < 5; i++){
@@ -28,13 +55,29 @@ class Validar {
 
     }
 
-    
+    // Método que devuelve un array con: la pregunta, la respuesta correcta y tres respuestas incorrectas de una de las preguntas guardadas en el atributo preguntas
+    preguntaList(preg) {
 
-    /* Getters  */
+        var pregunta = preg - 1; // Se le resta 1 al parámetro para que esté acorde a la indentación de los arrays
+        var ret = []; // array que guardará el retorno
 
-    // preguntas
-    getPreguntas() {
-        return this.preguntas;
+        ret.push(this.preguntas[pregunta].getPregunta()); // Se añade la respuesta de la pregunta corrspondiente a ret
+        ret.push(this.preguntas[pregunta].getRespuesta()); // Se añade la respuesta de la pregunta correspondiente a ret
+
+        // Se añaden las 3 respuestas incorrectas de la pregunta correspondiente a ret
+        for (var i = 0; i < 4; i++){
+
+            ret.push(this.preguntas[pregunta].getIncorrect()[i]);
+        }
+
+        return ret; // Se devuelve ret
+    };
+
+    /*  Getters */  
+
+    // materia
+    getMateria() {
+        return this.materia;
     }
 
     // cont_preguntas
