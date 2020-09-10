@@ -29,13 +29,14 @@
             
             <!--Mobile sidenav-->
             <ul id="slide-out" class="sidenav">
-                <img src="img/E30.jpg" style="width: 100%; height: auto;">
+                <img src="img/Banner.jpg" style="width: 100%; height: auto;">
                 <li><a href="#" class="sidenav-close" onclick="navigatePage('#main')"><i class="material-icons" >home</i>Página Principal</a></li>
                 <li><a href="#" class="sidenav-close" onclick="navigatePage('#help')"><i class="material-icons" >help</i>Instrucciones</a></li>
                 <li><div class="divider"></div></li>
                 <li><a class="subheader">Materias</a></li>
-                <li><a class="waves-effect sidenav-close" onclick="navigatePage('#questions')" href="#">Matemática</a></li>
-                <li><a class="waves-effect sidenav-close" href="#">Materia 2</a></li>
+                <li><a class="waves-effect sidenav-close" onclick="navigatePage('#questions'); preguntas(1)" href="#">Matemática</a></li>
+                <li><a class="waves-effect sidenav-close" onclick="navigatePage('#questions'); preguntas(2)" href="#">Lenguaje</a></li>
+                <li><a class="waves-effect sidenav-close" onclick="navigatePage('#questions'); preguntas(3)" href="#">Ciencias Naturales</a></li>
             </ul>
         </header>
 
@@ -58,8 +59,7 @@
                 <div class="col s12 m8 offset-m2">
                     <div class="card">
                         <div class="card-image">
-                            <img src="img/E30.jpg">
-                            <span class="card-title">Materias</span>
+                            <img src="img/Banner.jpg">
                         </div>
                         <div class="card-content">
                             <p>Selecciona una materia para empezar a aprender.</p>
@@ -68,10 +68,10 @@
                             <a href="#" onclick="navigatePage('#questions'); preguntas(1)">Matemática</a>
                         </div>
                         <div class="card-action">
-                            <a href="#">MATERÍA 2</a>
+                            <a href="#" onclick="navigatePage('#questions'); preguntas(2)">Lenguaje</a>
                         </div>
                         <div class="card-action">
-                            <a href="#">MATERÍA 3</a>
+                            <a href="#" onclick="navigatePage('#questions'); preguntas(3)">Ciencias Naturales</a>
                         </div>
 
                     </div>
@@ -85,7 +85,7 @@
                     <div class="card blue-grey darken-1">
                     <div class="card-content white-text">
                         <span class="card-title">Instrucciones</span>
-                        <p>Lorem ipsum</p>
+                        <p>Aquí encontrarás las instrucciones para sacarle el máximo provecho a PepeProfe. Dale click a alguno de los títulos de abajo si necesitas más información.</p>
                     </div>
                     </div>
                 </div>
@@ -95,15 +95,15 @@
                 <div class="col s12 m8 offset-m2">
                     <ul class="collapsible">
                         <li>
-                            <div class="collapsible-header">First</div>
+                            <div class="collapsible-header">Seleccionar una materia</div>
                             <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
                         </li>
                         <li>
-                            <div class="collapsible-header">Second</div>
+                            <div class="collapsible-header">Seleccionar la respuesta correcta</div>
                             <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
                         </li>
                         <li>
-                            <div class="collapsible-header">Third</div>
+                            <div class="collapsible-header">Que hacer al terminar todas las preguntas</div>
                             <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
                         </li>
                     </ul>
