@@ -153,7 +153,7 @@
                             </p>
                         </form>
                         <div class="center-align" style="margin-top: 20px; margin-bottom: 10px;">
-                            <button class="btn waves-effect waves-light" onclick="checkRespuesta()" type="submit" name="action">Submit
+                            <button class="btn waves-effect waves-light" onclick="cont.checkRespuesta()" type="submit" name="action">Submit
                                 <i class="material-icons right">send</i>
                             </button>
                         </div>
@@ -169,6 +169,14 @@
         <script src="js/Controlador.js"></script>
         <script src="js/Validar.js"></script>
         <script src="js/Pregunta.js"></script>
+        <script>
+            let cont;
+
+            function preguntas(mat) {
+                cont = new Controlador(mat);
+                cont.newPregunta();
+            }
+        </script>
 
     </body>
 <!-- Hola, soy Pepe, no se asusten, solo quería probar algo -->
