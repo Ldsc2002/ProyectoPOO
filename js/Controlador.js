@@ -9,6 +9,12 @@ con el frontend de HTML.
 
 "use strict"
 
+let cont;
+
+document.addEventListener('DOMContentLoaded', function() { //Espera a que la página termine de cargar y crea una instancia del controlador
+    cont = new Controlador();
+});
+
 class Controlador { //Clase de controlador
     constructor() {
         var elems = document.querySelectorAll('.sidenav'); //Navegación movil
@@ -34,7 +40,7 @@ class Controlador { //Clase de controlador
             this.preguntas.push(temp); //Añade la pregunta a this.preguntas
         }
 
-        this.newPregunta
+        this.newPregunta();
     }
 
     newPregunta() { //Cambia los valores del HTML con los de la pregunta
@@ -130,9 +136,3 @@ class Controlador { //Clase de controlador
         }
     }
 }
-
-let cont;
-
-document.addEventListener('DOMContentLoaded', function() { //Espera a que la página termine de cargar y crea una instancia del controlador
-    cont = new Controlador();
-});
