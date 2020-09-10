@@ -30,17 +30,20 @@ class Validar {
 
         var preguntas = []; // Arraylist que guarda las preguntas temporalmente
 
+        // Si materia es 1 
         if (materia == 1){
 
-            this.materia = "Matemática";
+            this.materia = "Matemática"; // asiganar materia matemática
 
+        // Si materia es 2
         } else if (materia == 2){
 
-            this.materia = "Lenguaje";
+            this.materia = "Lenguaje"; // asiganar materia Lenguaje
 
+        //Si materia es 3
         } else if (materia == 3){
 
-            this.materia = "Ciencias Naturales";
+            this.materia = "Ciencias Naturales"; // asiganar materia ciencias naturales
         }
 
         // Se crean 5 preguntas de la materia correspondiente 
