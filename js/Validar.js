@@ -76,8 +76,8 @@ class Validar {
 
         return ret; // Se devuelve ret
     }
-    
-    // Método para corroborar que la respuesta seleccionada este correcta 
+
+    // Método para corroborar que la respuesta seleccionada sea la respuesta correcta 
     corroborar(correcta){
         //Se crea un ciclo para reccorer el array de respuestas
         for (var i = 0; i < correcta.length; i++) {
