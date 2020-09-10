@@ -181,17 +181,6 @@
         <script src="js/Pregunta.js"></script>  
         
         <script>
-            window.onload = () => {
-            "use strict";
-
-            if ("serviceWorker" in navigator) {
-                navigator.serviceWorker
-                        .register("service-worker.js");
-                }
-            }
-        </script>
-        
-        <script>
             let cont;
 
             function preguntas(mat) {
@@ -199,6 +188,8 @@
                 cont.newPregunta();
             }
         </script>
+
+        <script src="js/main.js"></script>
 
     </body>
 </html>
