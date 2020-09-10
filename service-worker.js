@@ -7,6 +7,7 @@ var filesToCache = [
   "/js/Pregunta.js",
   "/js/uiLoad.js",
   "/js/Validar.js",
+  "js/main.js",
   "/img/Banner.jpg"
 ];
 
