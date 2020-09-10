@@ -65,7 +65,7 @@
                             <p>Selecciona una materia para empezar a aprender.</p>
                         </div>
                         <div class="card-action">
-                            <a href="#" onclick="navigatePage('#questions')">Matemática</a>
+                            <a href="#" onclick="navigatePage('#questions'); newPreguntas(1)">Matemática</a>
                         </div>
                         <div class="card-action">
                             <a href="#">MATERÍA 2</a>
@@ -166,6 +166,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
         <script src="js/uiLoad.js"></script>
+        <script src="js/Controlador.js"></script>
+        <script src="js/Validar.js"></script>
+        <script src="js/Pregunta.js"></script>
         
         <script>
         document.addEventListener('DOMContentLoaded', function() {

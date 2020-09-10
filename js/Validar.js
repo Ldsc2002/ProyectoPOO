@@ -90,7 +90,7 @@ class Validar {
 
     // cont_respuestas
     getCont_respuestas() {
-        return this.Cont_respuestas;
+        return this.cont_respuestas;
     }
 }
 
