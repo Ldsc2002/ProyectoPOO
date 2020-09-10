@@ -65,7 +65,7 @@
                             <p>Selecciona una materia para empezar a aprender.</p>
                         </div>
                         <div class="card-action">
-                            <a href="#" onclick="navigatePage('#questions'); newPreguntas(1)">Matemática</a>
+                            <a href="#" onclick="navigatePage('#questions'); preguntas(1)">Matemática</a>
                         </div>
                         <div class="card-action">
                             <a href="#">MATERÍA 2</a>
@@ -129,31 +129,31 @@
                         <form action="#">
                             <p>
                                 <label>
-                                    <input name="group1" class="with-gap" type="radio"/>
-                                    <span class="black-text">Opción 1</span>
+                                    <input id="Radio1" name="group1" class="with-gap" type="radio"/>
+                                    <span id="Opcion1" class="black-text">Opción 1</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input name="group1" class="with-gap" type="radio"/>
-                                    <span class="black-text">Opción 2</span>
+                                    <input id="Radio2" name="group1" class="with-gap" type="radio"/>
+                                    <span id="Opcion2" class="black-text">Opción 2</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input name="group1" class="with-gap" type="radio"/>
-                                    <span class="black-text">Opción 3</span>
+                                    <input id="Radio3" name="group1" class="with-gap" type="radio"/>
+                                    <span id="Opcion3" class="black-text">Opción 3</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input name="group1" class="with-gap" type="radio"/>
-                                    <span class="black-text">Opción 4</span>
+                                    <input id="Radio4" name="group1" class="with-gap" type="radio"/>
+                                    <span id="Opcion4" class="black-text">Opción 4</span>
                                 </label>
                             </p>
                         </form>
                         <div class="center-align" style="margin-top: 20px; margin-bottom: 10px;">
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <button class="btn waves-effect waves-light" onclick="checkRespuesta()" type="submit" name="action">Submit
                                 <i class="material-icons right">send</i>
                             </button>
                         </div>
