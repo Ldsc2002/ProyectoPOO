@@ -31,8 +31,8 @@
 
                     <a href="#" class="brand-logo right" style="margin-right: 8px;">PepeProfe</a>
                     <ul id="nav-mobile" class="left hide-on-med-and-down">
-                        <li><a href="#" onclick="navigatePage('#main')">Página Principal</a></li>
-                        <li><a href="#" onclick="navigatePage('#help')">Instrucciones</a></li>
+                        <li><a href="#" onclick="cont.navigatePage('#main')">Página Principal</a></li>
+                        <li><a href="#" onclick="cont.navigatePage('#help')">Instrucciones</a></li>
                     </ul>
                 </div>
             </nav>
@@ -40,13 +40,13 @@
             <!--Mobile sidenav-->
             <ul id="slide-out" class="sidenav">
                 <img src="img/Banner.jpg" style="width: 100%; height: auto;">
-                <li><a href="#" class="sidenav-close" onclick="navigatePage('#main')"><i class="material-icons" >home</i>Página Principal</a></li>
-                <li><a href="#" class="sidenav-close" onclick="navigatePage('#help')"><i class="material-icons" >help</i>Instrucciones</a></li>
+                <li><a href="#" class="sidenav-close" onclick="cont.navigatePage('#main')"><i class="material-icons" >home</i>Página Principal</a></li>
+                <li><a href="#" class="sidenav-close" onclick="cont.navigatePage('#help')"><i class="material-icons" >help</i>Instrucciones</a></li>
                 <li><div class="divider"></div></li>
                 <li><a class="subheader">Materias</a></li>
-                <li><a class="waves-effect sidenav-close" onclick="navigatePage('#questions'); preguntas(1)" href="#">Matemática</a></li>
-                <li><a class="waves-effect sidenav-close" onclick="navigatePage('#questions'); preguntas(2)" href="#">Lenguaje</a></li>
-                <li><a class="waves-effect sidenav-close" onclick="navigatePage('#questions'); preguntas(3)" href="#">Ciencias Naturales</a></li>
+                <li><a class="waves-effect sidenav-close" onclick="cont.navigatePage('#questions'); preguntas(1)" href="#">Matemática</a></li>
+                <li><a class="waves-effect sidenav-close" onclick="cont.navigatePage('#questions'); preguntas(2)" href="#">Lenguaje</a></li>
+                <li><a class="waves-effect sidenav-close" onclick="cont.navigatePage('#questions'); preguntas(3)" href="#">Ciencias Naturales</a></li>
             </ul>
         </header>
 
@@ -59,7 +59,7 @@
                         <p>PepeProfe te ayuda a aprender de manera divertida!</p>
                     </div>
                     <div class="card-action">
-                        <a href="#" onclick="navigatePage('#help')">Instrucciones</a>
+                        <a href="#" onclick="cont.navigatePage('#help')">Instrucciones</a>
                     </div>
                     </div>
                 </div>
@@ -75,13 +75,13 @@
                             <p>Selecciona una materia para empezar a aprender.</p>
                         </div>
                         <div class="card-action">
-                            <a href="#" onclick="navigatePage('#questions'); preguntas(1)">Matemática</a>
+                            <a href="#" onclick="cont.navigatePage('#questions'); cont.asignarMateria(1)">Matemática</a>
                         </div>
                         <div class="card-action">
-                            <a href="#" onclick="navigatePage('#questions'); preguntas(2)">Lenguaje</a>
+                            <a href="#" onclick="cont.navigatePage('#questions'); cont.asignarMateria(2)">Lenguaje</a>
                         </div>
                         <div class="card-action">
-                            <a href="#" onclick="navigatePage('#questions'); preguntas(3)">Ciencias Naturales</a>
+                            <a href="#" onclick="cont.navigatePage('#questions'); cont.asignarMateria(3)">Ciencias Naturales</a>
                         </div>
 
                     </div>
@@ -175,20 +175,9 @@
         <!--Materialize--> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-        <script src="js/uiLoad.js"></script>
         <script src="js/Controlador.js"></script>
         <script src="js/Validar.js"></script>
         <script src="js/Pregunta.js"></script>  
-        
-        <script>
-            let cont;
-
-            function preguntas(mat) {
-                cont = new Controlador(mat);
-                cont.newPregunta();
-            }
-        </script>
-
         <script src="js/main.js"></script>
 
     </body>

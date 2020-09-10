@@ -10,7 +10,20 @@ con el frontend de HTML.
 "use strict"
 
 class Controlador { //Clase de controlador
-    constructor(materia) { //Constructor de la clase
+    constructor() {
+        var elems = document.querySelectorAll('.sidenav'); //Navegación movil
+        var instances = M.Sidenav.init(elems);
+    
+        var elems = document.querySelectorAll('.collapsible'); //Colapsable
+        var instances = M.Collapsible.init(elems);
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                     .register("./service-worker.js");
+          }
+    }
+
+    asignarMateria(materia) { //Constructor de la clase
         //Atributos de la clase
         this.val = new Validar(materia); //Nueva instancia de validar
         this.preguntas = []; //Preguntas disponibles
@@ -20,6 +33,8 @@ class Controlador { //Clase de controlador
             let temp = this.val.preguntaList(i); //Obtiene la pregunta y la copia a temp
             this.preguntas.push(temp); //Añade la pregunta a this.preguntas
         }
+
+        this.newPregunta
     }
 
     newPregunta() { //Cambia los valores del HTML con los de la pregunta
@@ -83,4 +98,41 @@ class Controlador { //Clase de controlador
             }
         }
     }
+
+    navigatePage(load) { //Navega a otra página
+        let current = ["#main", "#help", "#questions"]; //Lista de las páginas en la app
+        let navigateTo = document.querySelector(load); //Elemento destino
+        let navigateIndex = current.findIndex(function(element) { //Elemento actual
+            return element === load;
+        });
+    
+        current.splice(navigateIndex, 1); //Quita el actual de la lista
+    
+        for (let i=0; i < current.length; i++) { //Por todas las páginas menos la actual
+            let currentPage = document.querySelector(current[i]); //Selecciona el elemento que coincide con ese ID
+    
+            currentPage.classList.add("pageOut"); //Añade la clase pageOut
+            currentPage.classList.remove("pageIn"); //Quita la clase pageIn
+    
+            setTimeout(navigateCurrent, 500); //Espera 500ms para llamar a navigateCurrent
+    
+            function navigateCurrent() {
+            currentPage.setAttribute("style", "display:none"); //Esconde el elemento
+            }
+        }
+    
+        setTimeout(navigate, 500); //Espera 500ms para llamar a navigate
+    
+        function navigate() { //Navega a la nueva página
+            navigateTo.setAttribute("style", "display:block"); //Hace visible el elemento
+            navigateTo.classList.add("pageIn"); //Añade la clase pageIn
+            navigateTo.classList.remove("pageOut"); //Quita la clase pageOut
+        }
+    }
 }
+
+let cont;
+
+document.addEventListener('DOMContentLoaded', function() { //Espera a que la página termine de cargar y crea una instancia del controlador
+    cont = new Controlador();
+});
