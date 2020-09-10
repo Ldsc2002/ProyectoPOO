@@ -1,15 +1,9 @@
 {
-    "short_name": "PepeProfe",
     "name": "PepeProfe",
-    "icons": [
-    {
-    "src":"/assets/icon.png",
-    "sizes": "192x192",
-    "type": "image/png"
-    }
-    ],
-    "start_url": "/?utm_source=homescreen",
-    "background_color": "#e05a47",
-    "theme_color": "#e05a47",
-    "display": "standalone"
+    "short_name": "PepeProfe",
+    "lang": "en-US",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "white"
   }
