@@ -1,6 +1,15 @@
+/******************************************************************
+Controlador.js
+Autor: Luis Santos
+Última modificación: 2020-09-09
+
+Implementa todas las funciones que comunican a las otras clases
+con el frontend de HTML.
+******************************************************************/
+
 "use strict"
 
-class Controlador {
+class Controlador { //Clase de controlador
     constructor(materia) {
         this.val = new Validar(materia);
         this.preguntas = [];
