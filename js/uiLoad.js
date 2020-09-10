@@ -1,5 +1,13 @@
 "use strict";
 
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+});
+
 function navigatePage(load) {
     let current = ["#main", "#help", "#questions"];
     let navigateTo = document.querySelector(load);
@@ -32,3 +40,4 @@ function navigatePage(load) {
 
     console.log(load + " from " + current);
 }
+
