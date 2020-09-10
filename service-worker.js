@@ -1,3 +1,5 @@
+//Service-Worker, se encarga del PWA
+
 var cacheName = "ProyectoPOO";
 var filesToCache = [
   "./index.html",

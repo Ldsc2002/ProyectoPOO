@@ -1,3 +1,5 @@
+//Registra el sevice-worker para poder usar el PWA
+
 window.onload = () => {
   "use strict";
 
