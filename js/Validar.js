@@ -54,8 +54,7 @@ class Validar {
         }
 
         this.preguntas = preguntas; // Se asigna un array llena con las 5 preguntas de la materia al atributo preguntas
-        this.cont_preguntas = 0; // Se inicia en 0 el contador de preguntas
-        this.cont_respuestas = 0; // Se inicia en 0 el contador de respuestas correctas
+        this.cont_preguntas = preguntas.length; // Se inicia en 0 el contador de preguntas
 
     }
 
@@ -69,7 +68,7 @@ class Validar {
         ret.push(this.preguntas[pregunta].getRespuesta()); // Se añade la respuesta de la pregunta correspondiente a ret
 
         // Se añaden las 3 respuestas incorrectas de la pregunta correspondiente a ret
-        for (var i = 0; i < 4; i++){
+        for (var i = 0; i < 3; i++){
 
             ret.push(this.preguntas[pregunta].getIncorrect()[i]);
         }
@@ -101,10 +100,4 @@ class Validar {
     getCont_preguntas() {
         return this.cont_preguntas;
     }
-
-    // cont_respuestas
-    getCont_respuestas() {
-        return this.Cont_respuestas;
-    }
 }
-
