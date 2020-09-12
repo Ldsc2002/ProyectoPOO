@@ -29,7 +29,6 @@ class Validar {
     constructor(materia){
 
         var preguntas = []; // Arraylist que guarda las preguntas temporalmente
-        var correcta=[]; //ArrayList que guarda las respuestas temporalmente  
 
         // Si materia es 1 
         if (materia == 1){
