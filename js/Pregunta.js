@@ -67,7 +67,7 @@ class Pregunta{
         } else if (materia == 2){
 
             // Se crean arrays para guardar las respuestas y preguntas textuales de las preguntas disponibles
-            var preguntas = ["El gusano de seda da ______", "El niño corre ______", "El avión _____ alto", "La casa es muy ______", "El sol está muy _______"];
+            var preguntas = ["El gusano de seda da ______.", "El niño corre ______.", "El avión _____ alto.", "La casa es muy ______.", "El sol está muy _______."];
             var respuestas = ["seda", "rapido", "vuela", "bonita", "lejos"];
 
             // Se asigna respuesta correcta, materia y pregunta según los parámetros dados
@@ -103,8 +103,8 @@ class Pregunta{
         } else {
 
             // Se crean arrays para guardar las respuestas y preguntas textuales de las preguntas disponibles
-            var respuestas = ["Gusto", "estrella", "ovíparo", "herbívoro", "Mamífero"];
-            var preguntas = ["¿Con que sentido persivimos los sabores?", "Complete la siguiente oración\nEl sol es una _____ muy grande", "La gallina pone huevos\nentonces esun animal: ", "Si un animal como plantas, entonces es: ", "El perro es un animal: "];
+            var respuestas = ["gusto", "estrella", "ovíparo", "herbívoro", "mamífero"];
+            var preguntas = ["¿Con que sentido percibimos los sabores?", "Complete la siguiente oración\nEl sol es una _____ muy grande.", "La gallina pone huevos\nentonces esun animal: ", "Si un animal como plantas, entonces es: ", "El perro es un animal: "];
 
             // Se asigna respuesta correcta, materia y pregunta según los parámetros dados
             this.materia = "Ciencias Naturales";
@@ -129,7 +129,7 @@ class Pregunta{
             // Si el parámetro index es 3 (cuarta pregunta de 5)
             } else if (index == 3){
 
-                this.incorrect = ["carnívoro", "saludable", "fuerte"]; // Se asignan las respuestas incorrectas segun la pregunta
+                this.incorrect = ["carnívoro", "herbívoro", "omnívoro"]; // Se asignan las respuestas incorrectas segun la pregunta
                 
             // Si el parámetro index es 4 (quinta pregunta de 5)
             } else {
