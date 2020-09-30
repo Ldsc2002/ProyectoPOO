@@ -23,7 +23,10 @@ class Calificaciones {
     setCalificacion(materia, nota) {
         if (materia == 1) {
             window.localStorage.setItem("resMat", nota);
+        } else if (materia == 2) {
+            window.localStorage.setItem("resLen", nota);
+        } else if (materia == 3) {
+            window.localStorage.setItem("resCie", nota);
         }
-    } //TODO
-
+    } //TODO probar funcionalidad
 }

@@ -147,12 +147,19 @@ class Controlador { //Clase de controlador
         if(resultados[0] != 0) {
             document.getElementById("resMat").innerHTML = resultados[0];
         }
-        
-        //TODO
+
+        if(resultados[1] != 0) {
+            document.getElementById("resLan").innerHTML = resultados[1];
+        }
+
+        if(resultados[2] != 0) {
+            document.getElementById("resCie").innerHTML = resultados[3];
+        }
+        //TODO probar funcionalidad
     }
 
     setCalificacion(nota) {
         this.cal.setCalificacion(this.materia, nota);
-        //TODO
+        //TODO probar funcionalidad
     }
 }
