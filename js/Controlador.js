@@ -140,6 +140,10 @@ class Controlador { //Clase de controlador
             navigateTo.classList.add("pageIn"); //Añade la clase pageIn
             navigateTo.classList.remove("pageOut"); //Quita la clase pageOut
         }
+
+        if (load == "#results") {
+            this.loadCalificaciones();
+        }
     }
 
     loadCalificaciones() {
