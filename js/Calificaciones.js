@@ -1,9 +1,9 @@
 class Calificaciones {
     getCalificaciones() {
-        matematica = window.localStorage.getItem("resMat");
-        lenguaje = window.localStorage.getItem("resLen");
-        ciencia = window.localStorage.getItem("resCie");
-        result = [0, 0, 0];
+        let matematica = window.localStorage.getItem("resMat");
+        let lenguaje = window.localStorage.getItem("resLen");
+        let ciencia = window.localStorage.getItem("resCie");
+        let result = [0, 0, 0];
 
         if (window.localStorage.getItem("resMat") != null) {
             result[0] = matematica;
