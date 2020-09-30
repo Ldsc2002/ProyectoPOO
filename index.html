@@ -33,7 +33,7 @@
                     <ul id="nav-mobile" class="left hide-on-med-and-down">
                         <li><a href="#" onclick="cont.navigatePage('#main')">Página Principal</a></li>
                         <li><a href="#" onclick="cont.navigatePage('#help')">Instrucciones</a></li>
-                        <li><a href="#" onclick="cont.navigatePage('#results')">Resultados</a></li>
+                        <li><a href="#" onclick="cont.navigatePage('#results')">Calificaciones</a></li>
                     </ul>
                 </div>
             </nav>
@@ -43,7 +43,7 @@
                 <img src="img/Banner.jpg" style="width: 100%; height: auto;">
                 <li><a href="#" class="sidenav-close" onclick="cont.navigatePage('#main')"><i class="material-icons" >home</i>Página Principal</a></li>
                 <li><a href="#" class="sidenav-close" onclick="cont.navigatePage('#help')"><i class="material-icons" >help</i>Instrucciones</a></li>
-                <li><a href="#" class="sidenav-close" onclick="cont.navigatePage('#results')"><i class="material-icons" >grading</i>Resultados</a></li>
+                <li><a href="#" class="sidenav-close" onclick="cont.navigatePage('#results')"><i class="material-icons" >grading</i>Calificaciones</a></li>
                 <li><div class="divider"></div></li>
                 <li><a class="subheader">Materias</a></li>
                 <li><a class="waves-effect sidenav-close" onclick="cont.navigatePage('#questions'); cont.asignarMateria(1)" href="#">Matemática</a></li>
@@ -179,8 +179,8 @@
                 <div class="col s12 m8 offset-m2">
                     <div class="card blue-grey darken-1">
                     <div class="card-content white-text">
-                        <span class="card-title">Instrucciones</span>
-                        <p>Aquí encontrarás las instrucciones para sacarle el máximo provecho a PepeProfe. Dale click a alguno de los títulos de abajo si necesitas más información.</p>
+                        <span class="card-title">Calificaciónes</span>
+                        <p>Aquí encontrarás tus calificaciones y podrás ver tu progreso en las diferentes matérias</p>
                     </div>
                     </div>
                 </div>
@@ -190,16 +190,16 @@
                 <div class="col s12 m8 offset-m2">
                     <ul class="collapsible">
                         <li>
-                            <div class="collapsible-header">Seleccionar una materia</div>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                            <div class="collapsible-header">Matemática</div>
+                            <div class="collapsible-body"><span id="resMat">Aún no has completado esta materia.</span></div>
                         </li>
                         <li>
-                            <div class="collapsible-header">Seleccionar la respuesta correcta</div>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                            <div class="collapsible-header">Lenguaje</div>
+                            <div class="collapsible-body"><span id="resLen">Aún no has completado esta materia.</span></div>
                         </li>
                         <li>
-                            <div class="collapsible-header">Que hacer al terminar todas las preguntas</div>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                            <div class="collapsible-header">Ciencias Naturales</div>
+                            <div class="collapsible-body"><span id="resCie">Aún no has completado esta materia.</span></div>
                         </li>
                     </ul>
                 </div>

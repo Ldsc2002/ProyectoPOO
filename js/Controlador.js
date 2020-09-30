@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function() { //Espera a que la pá
 });
 
 class Controlador { //Clase de controlador
+    cal = new Calificaciones();
+
     constructor() {
         var elems = document.querySelectorAll('.sidenav'); //Navegación movil
         var instances = M.Sidenav.init(elems);
@@ -32,6 +34,7 @@ class Controlador { //Clase de controlador
     asignarMateria(materia) { //Constructor de la clase
         //Atributos de la clase
         this.val = new Validar(materia); //Nueva instancia de validar
+        this.materia = materia;
         this.preguntas = []; //Preguntas disponibles
         this.count = 0; //Cuenta de preguntas hechas por el usuario
 
@@ -136,5 +139,20 @@ class Controlador { //Clase de controlador
             navigateTo.classList.add("pageIn"); //Añade la clase pageIn
             navigateTo.classList.remove("pageOut"); //Quita la clase pageOut
         }
+    }
+
+    loadCalificaciones() {
+        resultados = this.cal.getCalificaciones();
+
+        if(resultados[0] != 0) {
+            document.getElementById("resMat").innerHTML = resultados[0];
+        }
+        
+        //TODO
+    }
+
+    setCalificacion(nota) {
+        this.cal.setCalificacion(this.materia, nota);
+        //TODO
     }
 }
