@@ -49,7 +49,8 @@ class Controlador { //Clase de controlador
     newPregunta() { //Cambia los valores del HTML con los de la pregunta
         if ((this.count + 1) > this.preguntas.length) { //Si ya se respondieron todas las preguntas
             document.getElementById("preguntaOut").innerHTML = "Felicidades!"; //Mensaje al finalizar el juego
-            document.getElementById("materiaOut").innerHTML = "Has completado todas las preguntas! Ahora regresaras a la página principal"; 
+            document.getElementById("materiaOut").innerHTML = "Has completado todas las preguntas! Ahora regresarás a la página principal"; 
+            this.setCalificacion(this.materia, 100); //TODO obtener nota
             setTimeout(this.navigatePage("#main"), 5000)
         } else{ //Si aun hay preguntas
             let x = this.count; //Copia el valor de this.count
@@ -154,8 +155,7 @@ class Controlador { //Clase de controlador
 
         if(resultados[2] != 0) {
             document.getElementById("resCie").innerHTML = resultados[3];
-        }
-        //TODO probar funcionalidad
+        } //TODO probar funcionalidad
     }
 
     setCalificacion(nota) {
