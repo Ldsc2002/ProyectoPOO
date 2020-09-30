@@ -17,6 +17,7 @@ class Calificaciones {
             result[2] = ciencia;
         }
         //TODO probar funcionalidad
+        console.log(result)
         return result;
     }
 
