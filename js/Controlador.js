@@ -160,6 +160,7 @@ class Controlador { //Clase de controlador
 
     setCalificacion(nota) {
         this.cal.setCalificacion(this.materia, nota);
+        console.log(this.materia, nota)
         //TODO probar funcionalidad
     }
 }
