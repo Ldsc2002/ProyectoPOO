@@ -47,9 +47,9 @@ class Controlador { //Clase de controlador
         if ((this.count + 1) > this.preguntas.length) { //Si ya se respondieron todas las preguntas
             document.getElementById("preguntaOut").innerHTML = "Felicidades!"; //Mensaje al finalizar el juego
             document.getElementById("materiaOut").innerHTML = "Has completado todas las preguntas! Ahora regresaras a la página principal"; 
-            setTimeout(this.navigatePage("#main"), 500)
+            setTimeout(this.navigatePage("#main"), 5000)
         } else{ //Si aun hay preguntas
-            let x = this.count; //Copia el valor the this.count
+            let x = this.count; //Copia el valor de this.count
             document.getElementById("preguntaOut").innerHTML = this.preguntas[x][0]; //Obtiene la pregunta
             document.getElementById("materiaOut").innerHTML = this.val.getMateria(); //Obtiene la materia
 
