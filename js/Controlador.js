@@ -108,7 +108,7 @@ class Controlador { //Clase de controlador
     }
 
     navigatePage(load) { //Navega a otra página
-        let current = ["#main", "#help", "#questions"]; //Lista de las páginas en la app
+        let current = ["#main", "#help", "#questions", "#results"]; //Lista de las páginas en la app
         let navigateTo = document.querySelector(load); //Elemento destino
         let navigateIndex = current.findIndex(function(element) { //Elemento actual
             return element === load;
