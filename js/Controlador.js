@@ -147,7 +147,7 @@ class Controlador { //Clase de controlador
     }
 
     loadCalificaciones() {
-        resultados = this.cal.getCalificaciones();
+        let resultados = this.cal.getCalificaciones();
 
         if(resultados[0] != 0) {
             document.getElementById("resMat").innerHTML = resultados[0];
