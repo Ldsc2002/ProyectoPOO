@@ -8,7 +8,15 @@ class Calificaciones {
         if (window.localStorage.getItem("resMat") != null) {
             result[0] = matematica;
         }
-        //TODO
+        
+        if (window.localStorage.getItem("resLen") != null) {
+            result[1] = lenguaje;
+        }
+
+        if (window.localStorage.getItem("resCie") != null) {
+            result[2] = ciencia;
+        }
+        //TODO probar funcionalidad
         return result;
     }
 
