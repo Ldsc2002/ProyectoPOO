@@ -1,7 +1,7 @@
 /******************************************************************
 Controlador.js
 Autor: Luis Santos
-Última modificación: 2020-09-09
+Última modificación: 2020-10-01
 
 Implementa todas las funciones que comunican a las otras clases
 con el frontend de HTML.
@@ -141,8 +141,8 @@ class Controlador { //Clase de controlador
             navigateTo.classList.remove("pageOut"); //Quita la clase pageOut
         }
 
-        if (load == "#results") {
-            this.loadCalificaciones();
+        if (load == "#results") { //Si navega a la pagina de calificaciones
+            this.loadCalificaciones(); //Carga las calificaciones
         }
     }
 
@@ -162,9 +162,7 @@ class Controlador { //Clase de controlador
         } //TODO probar funcionalidad
     }
 
-    setCalificacion(nota) {
-        this.cal.setCalificacion(this.materia, nota);
-        console.log(this.materia, nota)
-        //TODO probar funcionalidad
+    setCalificacion(nota) { //Toma el argumento nota que debe guardar
+        this.cal.setCalificacion(this.materia, nota); //Guarda la calificación
     }
 }
