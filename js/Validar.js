@@ -88,7 +88,15 @@ class Validar {
             }
     }
 
-    
+    promedioRespuesta() {
+      var promedio = (cont_respuestas*100)/cont_preguntas;
+
+      if (promedio < 6){
+        return("Tu porcentaje de respuestas correctas es de: " + promedio + "¡No te desanimes!")
+      }else{
+        return("Tu porcentaje de respuestas correctas es de: " + promedio + "¡Sigue Así!")
+      }
+    }
 
     /*  Getters */
 
