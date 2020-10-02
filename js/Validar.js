@@ -1,7 +1,7 @@
 /**********************************************
 Programación orientada a objetos
 validar.js
-Autores: 
+Autores:
 Luis Santos: 20226
 Paola Contreras: 20213
 José Pablo Díaz: 20396
@@ -30,7 +30,7 @@ class Validar {
 
         var preguntas = []; // Arraylist que guarda las preguntas temporalmente
 
-        // Si materia es 1 
+        // Si materia es 1
         if (materia == 1){
 
             this.materia = "Matemática"; // asiganar materia matemática
@@ -46,7 +46,7 @@ class Validar {
             this.materia = "Ciencias Naturales"; // asiganar materia ciencias naturales
         }
 
-        // Se crean 5 preguntas de la materia correspondiente 
+        // Se crean 5 preguntas de la materia correspondiente
         for (var i = 0; i < 5; i++){
 
             preguntas.push(new Pregunta(materia, i)) // se crea una nueva instancia y se guarda en el array preguntas.
@@ -75,20 +75,22 @@ class Validar {
         return ret; // Se devuelve ret
     }
 
-    // Método para corroborar que la respuesta seleccionada sea la respuesta correcta 
+    // Método para corroborar que la respuesta seleccionada sea la respuesta correcta
     corroborar(correcta){
         //Se crea un ciclo para reccorer el array de respuestas
         for (var i = 0; i < correcta.length; i++) {
-            // Se crea la condicion para comparar la respuesta dada por el usuario en el array de respuestas basandose en el index 
+            // Se crea la condicion para comparar la respuesta dada por el usuario en el array de respuestas basandose en el index
             if (preguntas[Pregunta].getRespuesta() == correcta[i]) {
                 this.cont_respuestas++; // se le suma 1 al contador de respuestas
                 this.cont_preguntas++; // se le suma 1 al contador de preguntas
-            } else 
+            } else
                 this.cont_preguntas++; // se le suma 1 al contador de respuestas
             }
     }
 
-    /*  Getters */  
+    
+
+    /*  Getters */
 
     // materia
     getMateria() {
