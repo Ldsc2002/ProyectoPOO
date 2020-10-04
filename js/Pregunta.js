@@ -6,7 +6,7 @@ Autores:
 - Jóse Lucero: 20306
 - Diego Córdova: 20212
 
-Última modificación: 2020-10-03
+Última modificación: 2020-09-23
 
 Implementa las preguntas que se le pueden presentar al usuario. 
 ******************************************************************/
