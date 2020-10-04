@@ -1,13 +1,13 @@
 /******************************************************************
 Controlador.js
 Autor: Luis Santos
-Última modificación: 2020-10-01
+Última modificación: 2020-11-3
 
 Se encarga de utilizar localStorage para almacenar las notas 
 obtenidas por el usuario
 ******************************************************************/
 
-class Calificaciones {
+class Calificaciones { 
     getCalificaciones() { //Devuelve las calificaciones
         let matematica = window.localStorage.getItem("resMat"); //Calificacion de matematica
         let lenguaje = window.localStorage.getItem("resLen"); //Calificacion de lenguaje
@@ -29,7 +29,7 @@ class Calificaciones {
         return result; //Devuelve las calificaciones
     }
 
-    setCalificacion(materia, nota) {
+    setCalificacion(materia, nota) { //Guarda la calificación de una materia
         if (materia == 1) { //Si es matematica
             window.localStorage.setItem("resMat", nota);
         } else if (materia == 2) { //Si es lenguaje

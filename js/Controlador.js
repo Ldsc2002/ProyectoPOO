@@ -9,25 +9,26 @@ con el frontend de HTML.
 
 "use strict"
 
-let cont;
+let cont; //Instancia del controlador
 
 document.addEventListener('DOMContentLoaded', function() { //Espera a que la página termine de cargar y crea una instancia del controlador
-    cont = new Controlador();
+    cont = new Controlador(); //Crea una nueva instancia del controlador
 });
 
 class Controlador { //Clase de controlador
     cal = new Calificaciones();
 
-    constructor() {
+    constructor() { //Constructor de la clase
+        //Inicializa los elementos de la página web
+
         var elems = document.querySelectorAll('.sidenav'); //Navegación movil
         var instances = M.Sidenav.init(elems);
     
         var elems = document.querySelectorAll('.collapsible'); //Colapsable
         var instances = M.Collapsible.init(elems);
 
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker
-                     .register("./service-worker.js");
+        if ('serviceWorker' in navigator) { //Revisa que el navegador sea compatible con serviceWorkers
+            navigator.serviceWorker.register("./service-worker.js"); //Registra el serviceWorker de la PWA
           }
     }
 
@@ -159,7 +160,7 @@ class Controlador { //Clase de controlador
 
         if(resultados[2] != 0) {
             document.getElementById("resCie").innerHTML = resultados[3];
-        } //TODO probar funcionalidad
+        }
     }
 
     setCalificacion(nota) { //Toma el argumento nota que debe guardar
