@@ -75,27 +75,16 @@ class Validar {
         return ret; // Se devuelve ret
     }
 
-    // Método para corroborar que la respuesta seleccionada sea la respuesta correcta
-    corroborar(correcta){
-        //Se crea un ciclo para reccorer el array de respuestas
-        for (var i = 0; i < correcta.length; i++) {
-            // Se crea la condicion para comparar la respuesta dada por el usuario en el array de respuestas basandose en el index
-            if (preguntas[Pregunta].getRespuesta() == correcta[i]) {
-                this.cont_respuestas++; // se le suma 1 al contador de respuestas
-                this.cont_preguntas++; // se le suma 1 al contador de preguntas
-            } else
-                this.cont_preguntas++; // se le suma 1 al contador de respuestas
-            }
+    //Método para guardar el puntaje por pregunta 
+    sumarPuntaje(puntos){ 
+        this.puntos = this.puntos + puntos; //Suma el puntaje de la pregunta al total
+        this.respondidas++; //Suma uno a la cantidad de preguntas
     }
 
-    promedioRespuesta() {
-      var promedio = (cont_respuestas*100)/cont_preguntas;
-
-      if (promedio < 6){
-        return("Tu porcentaje de respuestas correctas es de: " + promedio + "¡No te desanimes!")
-      }else{
-        return("Tu porcentaje de respuestas correctas es de: " + promedio + "¡Sigue Así!")
-      }
+    //Devuelve la nota del usuario
+    notaTotal() { 
+        resultado = this.puntos/this.respondidas; //Saca el promedio de la nota
+        return resultado; //Devuelve la nota
     }
 
     /*  Getters */
