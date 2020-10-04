@@ -1,17 +1,15 @@
-/**********************************************
-Programación orientada a objetos
-Pregunta.js
+/******************************************************************
+Calificaciones.js
 Autores: 
-Luis Santos: 20226
-Paola Contreras: 20213
-José Pablo Díaz: 20396
-Jóse Lucero: 20306
-Diego Córdova: 20212
+- Luis Santos: 20226
+- Paola Contreras: 20213
+- Jóse Lucero: 20306
+- Diego Córdova: 20212
 
-Catedrático: Tomás Gálvez
+Última modificación: 2020-10-03
 
-Clase Pregunta
-**********************************************/
+Implementa las preguntas que se le pueden presentar al usuario. 
+******************************************************************/
 
 // Clase Pregunta
 class Pregunta{

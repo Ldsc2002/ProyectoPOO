@@ -1,7 +1,12 @@
 /******************************************************************
 Controlador.js
-Autor: Luis Santos
-Última modificación: 2020-10-01
+Autores: 
+- Luis Santos: 20226
+- Paola Contreras: 20213
+- Jóse Lucero: 20306
+- Diego Córdova: 20212
+
+Última modificación: 2020-10-03
 
 Implementa todas las funciones que comunican a las otras clases
 con el frontend de HTML.

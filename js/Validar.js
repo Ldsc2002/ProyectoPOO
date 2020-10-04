@@ -1,17 +1,16 @@
-/**********************************************
-Programación orientada a objetos
-validar.js
-Autores:
-Luis Santos: 20226
-Paola Contreras: 20213
-José Pablo Díaz: 20396
-Jóse Lucero: 20306
-Diego Córdova: 20212
+/******************************************************************
+Validar.js
+Autores: 
+- Luis Santos: 20226
+- Paola Contreras: 20213
+- Jóse Lucero: 20306
+- Diego Córdova: 20212
 
-Catedrático: Tomás Gálvez
+Última modificación: 2020-10-03
 
-Clase Validar
-**********************************************/
+Implementa todas las funciones que se comunican con el controlador
+para implementar las preguntas y la calificación de las mismas.
+******************************************************************/
 
 // Clase Validar
 class Validar {

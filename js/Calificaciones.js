@@ -1,10 +1,15 @@
 /******************************************************************
-Controlador.js
-Autor: Luis Santos
-Última modificación: 2020-11-3
+Calificaciones.js
+Autores: 
+- Luis Santos: 20226
+- Paola Contreras: 20213
+- Jóse Lucero: 20306
+- Diego Córdova: 20212
 
-Se encarga de utilizar localStorage para almacenar las notas 
-obtenidas por el usuario
+Última modificación: 2020-09-23
+
+Implementa el almacenamiento de las calificaciones obtenidas por
+el usuario.
 ******************************************************************/
 
 class Calificaciones { 
