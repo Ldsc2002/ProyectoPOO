@@ -85,7 +85,6 @@ class Validar {
     //Devuelve la nota del usuario
     notaTotal() { 
         let resultado = this.puntos/this.respondidas; //Saca el promedio de la nota
-        console.log(parseInt(this.puntos, this.respondidas ,resultado)) //TODO borrar
         return parseInt(resultado); //Devuelve la nota
     }
 

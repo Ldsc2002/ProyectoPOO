@@ -78,6 +78,7 @@ class Controlador { //Clase de controlador
             document.getElementById("Radio4").value = temp[3];
                 
             this.respuesta = this.preguntas[x][1]; //Asigna la respuesta de la pregunta a this.pregunta
+            this.puntos = 100;
             this.count++; //Suma uno a count
         }
        
@@ -103,17 +104,16 @@ class Controlador { //Clase de controlador
 
     checkRespuesta() { //Revisa si la respuesta es correcta y pasa a la siguiente pregunta
         let form = document.getElementsByName("group1"); //Obtiene los elementos del HTML donde estan las respuestas
-        let puntos = 100;
 
         for (let i = 0; i < form.length; i++) { //Verifica todos los elementos 
             if (form[i].checked) { //Revisa si es la opción seleccionada por el usuario
                 if (form[i].value == this.respuesta) { //Revisa si es la respuesta correcta
                     M.toast({html: "Respuesta correcta!"});
-                    this.val.sumarPuntaje(puntos); //Añade el puntaje de la pregunta al puntaje total
+                    this.val.sumarPuntaje(this.puntos); //Añade el puntaje de la pregunta al puntaje total
                     this.newPregunta() //Pasa a la siguiente pregunta
                 } else { //Si la respuesta no es correcta
                     M.toast({html: "Respuesta equivocada, vuelve a intentar"});
-                    puntos = puntos/2; //Reduce el puntaje de la pregunta a la mitad cada vez que se equivoca
+                    this.puntos = (this.puntos/2); //Reduce el puntaje de la pregunta a la mitad cada vez que se equivoca
                 }
             }
         }
