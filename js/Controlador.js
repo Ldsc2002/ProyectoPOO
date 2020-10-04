@@ -53,7 +53,7 @@ class Controlador { //Clase de controlador
     }
 
     newPregunta() { //Cambia los valores del HTML con los de la pregunta
-        if ((this.count) = this.preguntas.length) { //Si ya se respondieron todas las preguntas
+        if ((this.count + 1) > this.preguntas.length) { //Si ya se respondieron todas las preguntas
             document.getElementById("preguntaOut").innerHTML = "Felicidades! Tu nota es " + this.val.notaTotal(); //Mensaje al finalizar el juego
             document.getElementById("materiaOut").innerHTML = "Has completado todas las preguntas! Selecciona otra materia para seguir aprendiendo"; 
             this.setCalificacion(this.val.notaTotal()); //Obteniene la nota y la almacena
