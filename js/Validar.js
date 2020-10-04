@@ -28,6 +28,8 @@ class Validar {
     constructor(materia){
 
         var preguntas = []; // Arraylist que guarda las preguntas temporalmente
+        this.puntos = 0;
+        this.respondidas = 0;
 
         // Si materia es 1
         if (materia == 1){
@@ -83,7 +85,7 @@ class Validar {
     //Devuelve la nota del usuario
     notaTotal() { 
         let resultado = this.puntos/this.respondidas; //Saca el promedio de la nota
-        console.log(parseInt(resultado))
+        console.log(parseInt(this.puntos, this.respondidas ,resultado)) //TODO borrar
         return parseInt(resultado); //Devuelve la nota
     }
 
