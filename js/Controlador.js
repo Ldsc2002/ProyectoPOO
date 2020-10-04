@@ -40,7 +40,7 @@ class Controlador { //Clase de controlador
     asignarMateria(materia) { //Constructor de la clase
         //Atributos de la clase
         this.val = new Validar(materia); //Nueva instancia de validar
-        this.materia = materia;
+        this.materia = materia; //Materia actual
         this.preguntas = []; //Preguntas disponibles
         this.count = 0; //Cuenta de preguntas hechas por el usuario
 
@@ -49,15 +49,15 @@ class Controlador { //Clase de controlador
             this.preguntas.push(temp); //Añade la pregunta a this.preguntas
         }
 
-        this.newPregunta();
+        this.newPregunta(); //Nueva pregunta
     }
 
     newPregunta() { //Cambia los valores del HTML con los de la pregunta
         if (this.count == this.preguntas.length) { //Si ya se respondieron todas las preguntas
-            document.getElementById("preguntaOut").innerHTML = "Felicidades! Tu nota es " + this.val.notaTotal(); //Mensaje al finalizar el juego
-            document.getElementById("materiaOut").innerHTML = "Has completado todas las preguntas! Selecciona otra materia para seguir aprendiendo"; 
+            document.getElementById("materiaOut").innerHTML = "Felicidades! Tu nota es " + this.val.notaTotal(); //Mensaje al finalizar el juego
+            document.getElementById("preguntaOut").innerHTML = "Has completado todas las preguntas! Selecciona otra materia para seguir aprendiendo"; 
             this.setCalificacion(this.val.notaTotal()); //Obteniene la nota y la almacena
-            this.count++;
+            this.count++; //Suma uno a count
         } else if (this.count < this.preguntas.length) { //Si aun hay preguntas
             let x = this.count; //Copia el valor de this.count
             document.getElementById("preguntaOut").innerHTML = this.preguntas[x][0]; //Obtiene la pregunta
@@ -79,9 +79,9 @@ class Controlador { //Clase de controlador
             document.getElementById("Radio4").value = temp[3];
                 
             this.respuesta = this.preguntas[x][1]; //Asigna la respuesta de la pregunta a this.pregunta
-            this.puntos = 100;
+            this.puntos = 100; //La nota inicial para la pregunta
             this.count++; //Suma uno a count
-        } else {
+        } else { //Si el usuario vuelve a presionar submit tras haber terminado
             M.toast({html: "Ya has completado todas las preguntas"})
         }
     }
@@ -157,19 +157,19 @@ class Controlador { //Clase de controlador
         }
     }
 
-    loadCalificaciones() {
+    loadCalificaciones() { //Cargas las calificaciones obtenidas por el usuario
         let resultados = this.cal.getCalificaciones();
 
-        if(resultados[0] != 0) {
-            document.getElementById("resMat").innerHTML = resultados[0];
+        if(resultados[0] != 0) { //Verifica que el usuario haya completado la materia
+            document.getElementById("resMat").innerHTML = resultados[0]; //Cambia el valor
         }
 
-        if(resultados[1] != 0) {
-            document.getElementById("resLan").innerHTML = resultados[1];
+        if(resultados[1] != 0) { //Verifica que el usuario haya completado la materia
+            document.getElementById("resLan").innerHTML = resultados[1]; //Cambia el valor
         }
 
-        if(resultados[2] != 0) {
-            document.getElementById("resCie").innerHTML = resultados[3];
+        if(resultados[2] != 0) { //Verifica que el usuario haya completado la materia
+            document.getElementById("resCie").innerHTML = resultados[3]; //Cambia el valor
         }
     }
 
