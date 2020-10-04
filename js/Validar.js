@@ -82,7 +82,7 @@ class Validar {
 
     //Devuelve la nota del usuario
     notaTotal() { 
-        resultado = this.puntos/this.respondidas; //Saca el promedio de la nota
+        let resultado = this.puntos/this.respondidas; //Saca el promedio de la nota
         return resultado; //Devuelve la nota
     }
 
