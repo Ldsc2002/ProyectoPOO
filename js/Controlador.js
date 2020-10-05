@@ -103,7 +103,7 @@ class Controlador { //Clase de controlador
         }
       
         return array; //Devuelve un array mezclado
-    }
+    } //TODO mover a validar
 
     checkRespuesta() { //Revisa si la respuesta es correcta y pasa a la siguiente pregunta
         let form = document.getElementsByName("group1"); //Obtiene los elementos del HTML donde estan las respuestas
