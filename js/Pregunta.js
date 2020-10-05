@@ -45,9 +45,6 @@ class Pregunta{
                 });
 
                 if (materia == 1){
-                    xmlhttp.open("GET", "db/matematica.csv", true);
-                    xmlhttp.send();
-        
                     this.materia = "Matemática";
                     this.pregunta = ("Resuelva la siguiente operación matemática: " + resultado[index][0]);
                     this.respuesta = resultado[index][1];
@@ -60,7 +57,12 @@ class Pregunta{
             }
         }
 
+        if (materia == 1){
+            xmlhttp.open("GET", "db/matematica.csv", true);
+            xmlhttp.send();
+        }
 
+        /*
         if (materia == 2){
 
             // Se crean arrays para guardar las respuestas y preguntas textuales de las preguntas disponibles
@@ -133,7 +135,7 @@ class Pregunta{
 
                 this.incorrect = ["mamífero", "ovíparo", "herbívoro"]; // Se asignan las respuestas incorrectas segun la pregunta
             } 
-        }
+        } */
     }
 
    /* Getters   */
