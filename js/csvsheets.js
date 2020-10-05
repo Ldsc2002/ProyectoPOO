@@ -12,5 +12,5 @@ xmlhttp.onreadystatechange = function() {
         array = text.split(/\n|\r/g);
     }
 }
-xmlhttp.open("GET", "https://docs.google.com/spreadsheets/d/e/2PACX-1vRi0TErB19VVDtMywTl3CjNweMuABO7Ot25_x0C2MMqgfHPohJerAkBGAf6aS0T94xZ6-9WDLLcmTJ1/pub?output=csv", true);
+xmlhttp.open("GET", "data.csv", true);
 xmlhttp.send();
