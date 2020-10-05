@@ -40,6 +40,14 @@ class Pregunta{
                     complete: function(results) {
                         console.log("Finished:", results);
                         this.preguntas = results.data;
+
+                        if (materia == 1){
+                            for (var i = 0; i < this.preguntas.length; i++) {
+                                temp = this.preguntas[i][0]
+                                this.preguntas[i][0] = ("Resuelva la siguiente operación matemática: " + temp);
+                
+                            }
+                        }
                     }
                 });
             }
@@ -50,12 +58,6 @@ class Pregunta{
             xmlhttp.send();
 
             this.materia = "Matemática";
-
-            for (var i = 0; i < this.preguntas.length; i++) {
-                temp = this.preguntas[i][0]
-                this.preguntas[i][0] = ("Resuelva la siguiente operación matemática: " + temp);
-
-            }
         }
     }
 
