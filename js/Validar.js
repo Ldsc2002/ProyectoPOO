@@ -34,7 +34,7 @@ class Validar {
 
         // Se crean 5 preguntas de la materia correspondiente
         setTimeout(function() {this.cont_preguntas = this.preguntas.getSize()}, 1000)
-        console.log(this.preguntas)
+        console.log(this.preguntas.preguntas)
         //this.cont_preguntas = this.preguntas.getSize(); // Se inicia en 0 el contador de preguntas
 
     }
