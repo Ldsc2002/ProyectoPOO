@@ -22,7 +22,7 @@ class CargaArchivos {
                         if (materia == 1){
                             for (var i = 0; i < preguntas.length; i++) {
                                 let temp = preguntas[i][0]
-                                this.preguntas[i][0] = ("Resuelva la siguiente operación matemática: " + temp);
+                                preguntas[i][0] = ("Resuelva la siguiente operación matemática: " + temp);
                 
                             }
                         }
