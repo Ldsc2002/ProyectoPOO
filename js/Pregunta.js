@@ -51,7 +51,7 @@ class Pregunta{
 
             this.materia = "Matemática";
 
-            for (i = 0; i < this.preguntas.length; i++) {
+            for (var i = 0; i < this.preguntas.length; i++) {
                 temp = this.preguntas[i][0]
                 this.preguntas[i][0] = ("Resuelva la siguiente operación matemática: " + temp);
 
