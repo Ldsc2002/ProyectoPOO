@@ -1,4 +1,5 @@
 var xmlhttp;
+var file;
 
 if (window.XMLHttpRequest) { // IE7+, Firefox, Chrome, Opera, Safari
     xmlhttp = new XMLHttpRequest();
@@ -13,6 +14,7 @@ xmlhttp.onreadystatechange = function() {
         Papa.parse(text, {
             complete: function(results) {
                 console.log("Finished:", results);
+                file = results;
             }
         });
     }
