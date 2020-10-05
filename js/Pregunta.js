@@ -37,7 +37,19 @@ class Pregunta{
                 var text = xmlhttp.responseText;
         
                 Papa.parse(text, {
-                    complete: definirClase(results)
+                    complete: function(results) {
+                        console.log("Finished:", results);
+                        this.preguntas = results.data;
+                        this.cantidad = results.data.length;
+
+                        if (materia == 1){
+                            for (var i = 0; i < this.preguntas.length; i++) {
+                                let temp = this.preguntas[i][0]
+                                this.preguntas[i][0] = ("Resuelva la siguiente operación matemática: " + temp);
+                
+                            }
+                        }
+                    }
                 });
             }
         }
@@ -47,20 +59,6 @@ class Pregunta{
             xmlhttp.send();
 
             this.materia = "Matemática";
-        }
-    }
-
-    definirClase(results) {
-        console.log("Finished:", results);
-        this.preguntas = results.data;
-        this.cantidad = results.data.length;
-
-        if (materia == 1){
-            for (var i = 0; i < this.preguntas.length; i++) {
-                let temp = this.preguntas[i][0]
-                this.preguntas[i][0] = ("Resuelva la siguiente operación matemática: " + temp);
-
-            }
         }
     }
 
