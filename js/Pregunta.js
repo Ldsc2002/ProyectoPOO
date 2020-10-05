@@ -24,42 +24,13 @@ class Pregunta{
 
     // constructor
     constructor(materia){
-        var xmlhttp;
-        
-        if (window.XMLHttpRequest) { // IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else { // IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var text = xmlhttp.responseText;
-        
-                Papa.parse(text, {
-                    complete: function(results) {
-                        console.log("Finished:", results);
-                        this.preguntas = results.data;
-                        this.cantidad = results.data.length;
+        this.materia = materia;
+        this.cantidad = 5;
 
-                        if (materia == 1){
-                            for (var i = 0; i < this.preguntas.length; i++) {
-                                let temp = this.preguntas[i][0]
-                                this.preguntas[i][0] = ("Resuelva la siguiente operación matemática: " + temp);
-                
-                            }
-                        }
-                    }
-                });
-            }
-        }
+        this.preguntas = sessionStorage.getItem("matematica");
+        console.log(this.preguntas);
 
-        if (materia == 1){
-            xmlhttp.open("GET", "db/matematica.csv", true);
-            xmlhttp.send();
 
-            this.materia = "Matemática";
-        }
     }
 
    /* Getters   */

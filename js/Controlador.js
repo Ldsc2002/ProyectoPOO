@@ -26,6 +26,8 @@ class Controlador { //Clase de controlador
     constructor() { //Constructor de la clase
         //Inicializa los elementos de la página web
 
+        let carga = new CargaArchivos();
+
         var elems = document.querySelectorAll('.sidenav'); //Navegación movil
         var instances = M.Sidenav.init(elems);
     
