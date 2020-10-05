@@ -40,6 +40,7 @@ class Pregunta{
                     complete: function(results) {
                         console.log("Finished:", results);
                         this.preguntas = results.data;
+                        this.cantidad = results.data.length;
                         console.log(this.preguntas)
 
                         if (materia == 1){
@@ -85,6 +86,6 @@ class Pregunta{
    }
 
    getSize() {
-       return this.preguntas.length
+       return this.cantidad;
    }
 }
