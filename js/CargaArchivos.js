@@ -16,8 +16,6 @@ class CargaArchivos {
                 Papa.parse(text, {
                     complete: function(results) {
                         console.log("Finished:", results);
-                        this.preguntas = results.data;
-                        this.cantidad = results.data.length;
 
                         if (materia == 1){
                             for (var i = 0; i < this.preguntas.length; i++) {
@@ -26,7 +24,7 @@ class CargaArchivos {
                 
                             }
                         }
-                        sessionStorage.setItem("matematica", results.data)
+                        sessionStorage.setItem("matematica", this.preguntas)
 
                     }
                 });

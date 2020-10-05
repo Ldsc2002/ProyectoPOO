@@ -29,6 +29,7 @@ class Pregunta{
 
         this.preguntas = sessionStorage.getItem("matematica");
         console.log(this.preguntas);
+        console.log(sessionStorage.getItem("matematica"))
 
 
     }
