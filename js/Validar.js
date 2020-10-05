@@ -48,7 +48,7 @@ class Validar {
         ret.push(this.preguntas.getRespuesta(pregunta)); // Se añade la respuesta de la pregunta correspondiente a ret
 
         // Se añaden las 3 respuestas incorrectas de la pregunta correspondiente a ret
-        temp = this.preguntas.getIncorrect(pregunta);
+        let temp = this.preguntas.getIncorrect(pregunta);
         
         for (var i = 0; i < temp.length; i++){
             ret.push(temp[i]);
