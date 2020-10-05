@@ -51,6 +51,8 @@ class Pregunta{
 
    // incorrect
    getIncorrect(x){
+       console.log(this.preguntas[x][2], this.preguntas[x][3], this.preguntas[x][4]);
+
        return (this.preguntas[x][2], this.preguntas[x][3], this.preguntas[x][4]);
    }
 
