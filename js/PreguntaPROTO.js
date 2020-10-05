@@ -18,5 +18,5 @@ xmlhttp.onreadystatechange = function() {
     }
 }
 
-xmlhttp.open("GET", "matematica.csv", true);
+xmlhttp.open("GET", "db/matematica.csv", true);
 xmlhttp.send();
