@@ -29,8 +29,6 @@ class Pregunta{
 
         this.preguntas = JSON.parse(sessionStorage.getItem("matematica"));
         console.log(this.preguntas);
-        console.log(sessionStorage.getItem("matematica"))
-
 
     }
 
