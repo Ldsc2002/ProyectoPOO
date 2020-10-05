@@ -1,36 +1,16 @@
-function parseCSV(text) {
-  // Obtenemos las lineas del texto
-  let lines = text.replace(/\r/g, '').split('\n');
-  return lines.map(line => {
-    // Por cada linea obtenemos los valores
-    let values = line.split(',');
-    return values;
-  });
+var array = [];
+var xmlhttp;
+if (window.XMLHttpRequest) { // IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp = new XMLHttpRequest();
+} else { // IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 }
-
-function reverseMatrix(matrix){
-  let output = [];
-  // Por cada fila
-  matrix.forEach((values, row) => {
-    // Vemos los valores y su posicion
-    values.forEach((value, col) => {
-      // Si la posición aún no fue creada
-      if (output[col] === undefined) output[col] = [];
-      output[col][row] = value;
-    });
-  });
-  return output;
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        var text = xmlhttp.responseText;
+        // Now convert it into array using regex
+        array = text.split(/\n|\r/g);
+    }
 }
-
-function readFile(file) {
-  let file = evt.target.files[0];
-  let reader = new FileReader();
-  reader.onload = (e) => {
-    // Cuando el archivo se terminó de cargar
-    let lines = parseCSV(e.target.result);
-    let output = reverseMatrix(lines);
-    console.log(output);
-  };
-  // Leemos el contenido del archivo seleccionado
-  reader.readAsBinaryString('https://docs.google.com/spreadsheets/d/e/2PACX-1vRi0TErB19VVDtMywTl3CjNweMuABO7Ot25_x0C2MMqgfHPohJerAkBGAf6aS0T94xZ6-9WDLLcmTJ1/pub?output=csv');
-}
+xmlhttp.open("GET", "https://docs.google.com/spreadsheets/d/e/2PACX-1vRi0TErB19VVDtMywTl3CjNweMuABO7Ot25_x0C2MMqgfHPohJerAkBGAf6aS0T94xZ6-9WDLLcmTJ1/pub?output=csv", true);
+xmlhttp.send();
