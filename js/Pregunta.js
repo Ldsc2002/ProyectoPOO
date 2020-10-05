@@ -46,7 +46,7 @@ class Pregunta{
 
    // pregunta
    getPregunta(x){
-       return (this.preguntas[x][0]);
+       return (this.preguntas[x+1][0]);
    }
 
    // incorrect
