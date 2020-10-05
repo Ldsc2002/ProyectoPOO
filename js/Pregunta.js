@@ -29,7 +29,7 @@ class Pregunta{
 
         this.preguntas = JSON.parse(sessionStorage.getItem("matematica"));
         console.log(this.preguntas);
-        console.log(this.preguntas[0])
+        console.log(this.preguntas[0][0])
     }
 
    /* Getters   */
@@ -46,12 +46,12 @@ class Pregunta{
 
    // pregunta
    getPregunta(x){
-       return this.preguntas[x][0];
+       return (this.preguntas[x][0]);
    }
 
    // incorrect
    getIncorrect(x){
-       return [this.preguntas[x][2], this.preguntas[x][3], this.preguntas[x][4]];
+       return (this.preguntas[x][2], this.preguntas[x][3], this.preguntas[x][4]);
    }
 
    getSize() {
