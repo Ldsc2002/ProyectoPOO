@@ -43,7 +43,7 @@ class Pregunta{
 
                         if (materia == 1){
                             for (var i = 0; i < this.preguntas.length; i++) {
-                                temp = this.preguntas[i][0]
+                                let temp = this.preguntas[i][0]
                                 this.preguntas[i][0] = ("Resuelva la siguiente operación matemática: " + temp);
                 
                             }
@@ -84,6 +84,6 @@ class Pregunta{
    }
 
    getSize() {
-       return preguntas.length
+       return this.preguntas.length
    }
 }

@@ -30,7 +30,7 @@ class Validar {
 
         this.puntos = 0;
         this.respondidas = 0;
-        this.materia = pregunta.getMateria();
+        this.materia = this.preguntas.getMateria();
 
         // Se crean 5 preguntas de la materia correspondiente
 
