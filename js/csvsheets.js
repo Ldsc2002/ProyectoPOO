@@ -14,3 +14,4 @@ xmlhttp.onreadystatechange = function() {
 }
 xmlhttp.open("GET", "data.csv", true);
 xmlhttp.send();
+console.log(xmlhttp);
