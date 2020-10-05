@@ -26,9 +26,15 @@ class Pregunta{
     constructor(materia){
         if (materia = 1) {
             this.materia = "Matemática"
+            this.preguntas = JSON.parse(sessionStorage.getItem("matematica"));
+        } else if (materia = 2) {
+            this.materia = "Lenguaje";
+            this.preguntas = JSON.parse(sessionStorage.getItem("lenguaje"));
+        } else if (materia = 3) {
+            this.materia = "Ciencias";
+            this.preguntas = JSON.parse(sessionStorage.getItem("ciencias"));
         }
 
-        this.preguntas = JSON.parse(sessionStorage.getItem("matematica"));
         this.cantidad = this.preguntas.length;
     }
 
