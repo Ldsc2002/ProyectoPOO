@@ -43,24 +43,21 @@ class Pregunta{
                         resultado = results.data;
                     }
                 });
-
-                if (materia == 1){
-                    this.materia = "Matemática";
-                    this.pregunta = ("Resuelva la siguiente operación matemática: " + resultado[index][0]);
-                    this.respuesta = resultado[index][1];
-                    this.incorrect = [resultado[index][2], resultado[index][3], resultado[index][4]]
-        
-                    for (i = 2; i < resultado[index].length; i++) {
-        
-                    }
-                }
             }
         }
 
         if (materia == 1){
             xmlhttp.open("GET", "db/matematica.csv", true);
             xmlhttp.send();
-        }
+
+            this.materia = "Matemática";
+            this.pregunta = ("Resuelva la siguiente operación matemática: " + resultado[index][0]);
+            this.respuesta = resultado[index][1];
+            this.incorrect = [resultado[index][2], resultado[index][3], resultado[index][4]];
+
+
+            }
+        
 
         /*
         if (materia == 2){
