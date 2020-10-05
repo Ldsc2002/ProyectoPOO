@@ -1,6 +1,8 @@
-$(function(){var sheetUrl = 'https://spreadsheets.google.com/feeds/cells/1X5RPQRPKrYvB2nOFwrpLzJ9UP6dt76gVmj20dWEcyJk/1/public/full?alt=json';
-$.getJSON(sheetUrl, function(data){
-  var entry = data.feed.entry;
-  console.log(entry);
-})
+document.addEventListener('DOMContentLoaded', function() {
+    Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vTY9aEURaOJOJd7ZF3g0yE-nbA8HO6rfPjdKJHLp8JGrmJSiz44weM_BtZizodIjhdwtYFpyeiD75C1/pub?output=csv", {
+        download: true,
+        complete: function(results) {
+            console.log(results);
+        }
+    });
 });
