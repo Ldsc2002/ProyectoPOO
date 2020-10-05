@@ -54,6 +54,8 @@ class Validar {
             ret.push(temp[i]);
         }
 
+        console.log(ret)
+
         return ret; // Se devuelve ret
     }
 
