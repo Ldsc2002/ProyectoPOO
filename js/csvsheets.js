@@ -22,7 +22,7 @@ function reverseMatrix(matrix){
   return output;
 }
 
-function readFile('https://docs.google.com/spreadsheets/d/e/2PACX-1vRi0TErB19VVDtMywTl3CjNweMuABO7Ot25_x0C2MMqgfHPohJerAkBGAf6aS0T94xZ6-9WDLLcmTJ1/pub?output=csv') {
+function readFile(file) {
   let file = evt.target.files[0];
   let reader = new FileReader();
   reader.onload = (e) => {
@@ -32,5 +32,5 @@ function readFile('https://docs.google.com/spreadsheets/d/e/2PACX-1vRi0TErB19VVD
     console.log(output);
   };
   // Leemos el contenido del archivo seleccionado
-  reader.readAsBinaryString(file);
+  reader.readAsBinaryString('https://docs.google.com/spreadsheets/d/e/2PACX-1vRi0TErB19VVDtMywTl3CjNweMuABO7Ot25_x0C2MMqgfHPohJerAkBGAf6aS0T94xZ6-9WDLLcmTJ1/pub?output=csv');
 }
