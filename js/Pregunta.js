@@ -40,6 +40,7 @@ class Pregunta{
                     complete: function(results) {
                         console.log("Finished:", results);
                         this.preguntas = results.data;
+                        console.log(this.preguntas)
 
                         if (materia == 1){
                             for (var i = 0; i < this.preguntas.length; i++) {
