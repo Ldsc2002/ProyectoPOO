@@ -27,7 +27,7 @@ class Pregunta{
         this.materia = materia;
         this.cantidad = 5;
 
-        this.preguntas = sessionStorage.getItem("matematica");
+        this.preguntas = JSON.parse(sessionStorage.getItem("matematica"));
         console.log(this.preguntas);
         console.log(sessionStorage.getItem("matematica"))
 
