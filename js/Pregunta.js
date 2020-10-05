@@ -29,7 +29,7 @@ class Pregunta{
 
         this.preguntas = JSON.parse(sessionStorage.getItem("matematica"));
         console.log(this.preguntas);
-
+        console.log(this.preguntas[0])
     }
 
    /* Getters   */
