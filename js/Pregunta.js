@@ -38,6 +38,7 @@ class Pregunta{
         
                 Papa.parse(text, {
                     complete: function(results) {
+                        console.log("Finished:", results);
                         this.preguntas = results.data;
                         this.cantidad = results.data.length;
 
