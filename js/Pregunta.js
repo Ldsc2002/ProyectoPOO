@@ -43,23 +43,25 @@ class Pregunta{
                         resultado = results.data;
                     }
                 });
+
+                if (materia == 1){
+                    xmlhttp.open("GET", "db/matematica.csv", true);
+                    xmlhttp.send();
+        
+                    this.materia = "Matemática";
+                    this.pregunta = ("Resuelva la siguiente operación matemática: " + resultado[index][0]);
+                    this.respuesta = resultado[index][1];
+                    this.incorrect = [resultado[index][2], resultado[index][3], resultado[index][4]]
+        
+                    for (i = 2; i < resultado[index].length; i++) {
+        
+                    }
+                }
             }
         }
 
-        if (materia == 1){
-            xmlhttp.open("GET", "db/matematica.csv", true);
-            xmlhttp.send();
 
-            this.materia = "Matemática";
-            this.pregunta = ("Resuelva la siguiente operación matemática: " + resultado[index][0]);
-            this.respuesta = resultado[index][1];
-            this.incorrect = [resultado[index][2], resultado[index][3], resultado[index][4]]
-
-            for (i = 2; i < resultado[index].length; i++) {
-
-            }
-
-        } else if (materia == 2){
+        if (materia == 2){
 
             // Se crean arrays para guardar las respuestas y preguntas textuales de las preguntas disponibles
             var preguntas = ["El gusano de seda da ______.", "El niño corre ______.", "El avión _____ alto.", "La casa es muy ______.", "El sol está muy _______."];
