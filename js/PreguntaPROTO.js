@@ -1,29 +1,24 @@
 var file;
+var xmlhttp;
 
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("text/csv");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
+if (window.XMLHttpRequest) { // IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp = new XMLHttpRequest();
+} else { // IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 }
 
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var text = xmlhttp.responseText;
+        console.log(text)
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    
-    readTextFile("../db/matematica.csv", function(text){
-        file = JSON.parse(text);
-        console.log(file);
-
-        Papa.parse(file, {
+        Papa.parse(text, {
             complete: function(results) {
                 console.log("Finished:", results);
             }
         });
-    });
-});
+    }
+}
+
+xmlhttp.open("GET", "data.csv", true);
+xmlhttp.send();
