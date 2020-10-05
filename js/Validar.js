@@ -57,6 +57,25 @@ class Validar {
         return ret; // Se devuelve ret
     }
 
+    mezclarRespuestas(array) { //Mezcla un array para randomizar las posiciones de las respuestas
+        var currentIndex = array.length, temporaryValue, randomIndex;
+      
+        // Mientras hay elementos que mezclar
+        while (0 !== currentIndex) {
+      
+          // Toma uno de los elementos restantes
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+      
+          // Lo cambia por otro de los elementos
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+      
+        return array; //Devuelve un array mezclado
+    }
+    
     //Método para guardar el puntaje por pregunta 
     sumarPuntaje(puntos){ 
         this.puntos = this.puntos + puntos; //Suma el puntaje de la pregunta al total

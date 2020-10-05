@@ -68,7 +68,7 @@ class Controlador { //Clase de controlador
             let temp = this.preguntas[x].slice(); //Copia la pregunta y sus respuestas al array
             temp.shift(); //Borra el primer valor, que contiene la pregunta
 
-            this.mezclarRespuestas(temp); //Mezcla el array temp
+            this.val.mezclarRespuestas(temp); //Mezcla el array temp
 
             //Asigna el texto y el valor de cada una de las respuestas a un elemento del HTML
             document.getElementById("Opcion1").innerHTML = temp[0];
@@ -87,25 +87,6 @@ class Controlador { //Clase de controlador
             M.toast({html: "Ya has completado todas las preguntas"})
         }
     }
-
-    mezclarRespuestas(array) { //Mezcla un array para randomizar las posiciones de las respuestas
-        var currentIndex = array.length, temporaryValue, randomIndex;
-      
-        // Mientras hay elementos que mezclar
-        while (0 !== currentIndex) {
-      
-          // Toma uno de los elementos restantes
-          randomIndex = Math.floor(Math.random() * currentIndex);
-          currentIndex -= 1;
-      
-          // Lo cambia por otro de los elementos
-          temporaryValue = array[currentIndex];
-          array[currentIndex] = array[randomIndex];
-          array[randomIndex] = temporaryValue;
-        }
-      
-        return array; //Devuelve un array mezclado
-    } //TODO mover a validar
 
     checkRespuesta() { //Revisa si la respuesta es correcta y pasa a la siguiente pregunta
         let form = document.getElementsByName("group1"); //Obtiene los elementos del HTML donde estan las respuestas
