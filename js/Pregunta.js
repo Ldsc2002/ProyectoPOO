@@ -24,42 +24,39 @@ class Pregunta{
 
     // constructor
     constructor(materia, index){
+        var xmlhttp;
+        var resultado;
+        
+        if (window.XMLHttpRequest) { // IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else { // IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var text = xmlhttp.responseText;
+        
+                Papa.parse(text, {
+                    complete: function(results) {
+                        console.log("Finished:", results);
+                        resultado = results.data;
+                    }
+                });
+            }
+        }
 
         if (materia == 1){
+            xmlhttp.open("GET", "db/matematica.csv", true);
+            xmlhttp.send();
 
-            // Se crean arrays para guardar las respuestas y preguntas textuales de las preguntas disponibles
-            var respuestas = [2, 9, 1, 5, 28];
-            var preguntas = ["4 - 2", "3 x 3", "(7 + 2) - 8", "5 x 1", "7 x 4"];
+            this.materia = "Matemática";
+            this.pregunta = ("Resuelva la siguiente operación matemática: " + resultado[index][0]);
+            this.respuesta = resultado[index][1];
+            this.incorrect = [resultado[index][2], resultado[index][3], resultado[index][4]]
 
-            // Se asigna respuesta correcta, materia y pregunta según los parámetros dados
-            this.pregunta = ("Resuelva la siguiente operación matemática: " + preguntas[index]);
-            this.respuesta = respuestas[index];
-            
+            for (i = 2; i < resultado[index].length; i++) {
 
-            // Si el parámetro index es 0 (primera pregunta de 5)
-            if (index == 0){
-
-                this.incorrect = [3, 5, 6]; // Se asignan las respuestas incorrectas segun la pregunta
-
-            // Si el parámetro index es 1 (segunda pregunta de 5)
-            } else if (index == 1){
-                
-                this.incorrect = [6, 3, 5]; // Se asignan las respuestas incorrectas segun la pregunta
-
-            // Si el parámetro index es 2 (tercera pregunta de 5)
-            } else if (index == 2){
-
-                this.incorrect = [3, 9, 8]; // Se asignan las respuestas incorrectas segun la pregunta        
-
-            // Si el parámetro index es 3 (cuarta pregunta de 5)
-            } else if (index == 3){
-
-                this.incorrect = [6, 7, 4]; // Se asignan las respuestas incorrectas segun la pregunta
-                
-            // Si el parámetro index es 4 (quinta pregunta de 5)
-            } else {
-
-                this.incorrect = [20, 12, 14]; // Se asignan las respuestas incorrectas segun la pregunta
             }
 
         } else if (materia == 2){
