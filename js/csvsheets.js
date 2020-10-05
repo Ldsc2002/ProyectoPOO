@@ -1,4 +1,4 @@
-:unction parseCSV(text) {
+function parseCSV(text) {
   // Obtenemos las lineas del texto
   let lines = text.replace(/\r/g, '').split('\n');
   return lines.map(line => {
