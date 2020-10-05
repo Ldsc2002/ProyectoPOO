@@ -12,7 +12,8 @@ xmlhttp.onreadystatechange = function() {
         array = text.split(/\n|\r/g);
     }
 }
-xmlhttp.open("GET", "data.csv", true);
+test = xmlhttp.open("GET", "data.csv", true);
 xmlhttp.send();
 console.log(xmlhttp);
 console.log(array);
+console.log(test)
