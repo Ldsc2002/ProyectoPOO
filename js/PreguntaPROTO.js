@@ -20,5 +20,5 @@ xmlhttp.onreadystatechange = function() {
     }
 }
 
-xmlhttp.open("GET", "db/matematica.csv", true);
+xmlhttp.open("GET", "https://docs.google.com/spreadsheets/d/e/2PACX-1vTY9aEURaOJOJd7ZF3g0yE-nbA8HO6rfPjdKJHLp8JGrmJSiz44weM_BtZizodIjhdwtYFpyeiD75C1/pub?output=csv", true);
 xmlhttp.send();
