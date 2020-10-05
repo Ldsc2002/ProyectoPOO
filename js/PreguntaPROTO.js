@@ -1,4 +1,3 @@
-var file;
 var xmlhttp;
 
 if (window.XMLHttpRequest) { // IE7+, Firefox, Chrome, Opera, Safari
@@ -10,7 +9,6 @@ if (window.XMLHttpRequest) { // IE7+, Firefox, Chrome, Opera, Safari
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var text = xmlhttp.responseText;
-        console.log(text)
 
         Papa.parse(text, {
             complete: function(results) {
@@ -20,5 +18,5 @@ xmlhttp.onreadystatechange = function() {
     }
 }
 
-xmlhttp.open("GET", "data.csv", true);
+xmlhttp.open("GET", "/db/matematica.csv", true);
 xmlhttp.send();
