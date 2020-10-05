@@ -25,15 +25,42 @@ class CargaArchivos {
                                 preguntas[i][0] = ("Resuelva la siguiente operación matemática: " + temp);
                 
                             }
-                        }
-                        sessionStorage.setItem("matematica", JSON.stringify(preguntas))
+                            sessionStorage.setItem("matematica", JSON.stringify(preguntas))
+                            materia++;
+
+                        } else if (materia == 2){
+                            for (var i = 0; i < preguntas.length; i++) {
+                                let temp = preguntas[i][0]
+                                preguntas[i][0] = ("Complete la siguiente oración: " + temp);
+                
+                            }
+                            sessionStorage.setItem("lenguaje", JSON.stringify(preguntas))
+                            materia++;
+
+                        } else if (materia == 3){
+                            for (var i = 0; i < preguntas.length; i++) {
+                                let temp = preguntas[i][0]
+                                preguntas[i][0] = ("Complete la siguiente oración: " + temp);
+                
+                            }
+                            sessionStorage.setItem("ciencias", JSON.stringify(preguntas))
+                            materia++;
+
+                        } 
 
                     }
                 });
             }
         }
-    xmlhttp.open("GET", "db/matematica.csv", true);
-    xmlhttp.send();
-        
+
+        xmlhttp.open("GET", "db/matematica.csv", true);
+        xmlhttp.send();
+            
+        xmlhttp.open("GET", "db/lenguaje.csv", true);
+        xmlhttp.send();
+
+        xmlhttp.open("GET", "db/ciencias.csv", true);
+        xmlhttp.send();
+
     }
 }
