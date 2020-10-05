@@ -25,11 +25,9 @@ class Pregunta{
     // constructor
     constructor(materia){
         this.materia = materia;
-        this.cantidad = 5;
 
         this.preguntas = JSON.parse(sessionStorage.getItem("matematica"));
-        console.log(this.preguntas);
-        console.log(this.preguntas[0][0])
+        this.cantidad = this.preguntas.length;
     }
 
    /* Getters   */
