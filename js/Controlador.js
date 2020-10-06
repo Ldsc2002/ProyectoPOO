@@ -6,7 +6,7 @@ Autores:
 - Jóse Lucero: 20306
 - Diego Córdova: 20212
 
-Última modificación: 2020-10-03
+Última modificación: 2020-10-05
 
 Implementa todas las funciones que comunican a las otras clases
 con el frontend de HTML.
@@ -26,7 +26,7 @@ class Controlador { //Clase de controlador
     constructor() { //Constructor de la clase
         //Inicializa los elementos de la página web
 
-        let carga = new CargaArchivos();
+        let carga = new CargaArchivos(); //Crea una nueva instancia de cargaArchivos
 
         var elems = document.querySelectorAll('.sidenav'); //Navegación movil
         var instances = M.Sidenav.init(elems);

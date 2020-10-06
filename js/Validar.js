@@ -20,21 +20,20 @@ class Validar {
     // String materia: identifica la materia
     // Pregunta preguntas: Objeto de la clase pregunta que contiene las preguntas de una materia
     // int cont_preguntas: Lleva el conteo de las preguntas que se le hacen al usuario.
-    // int cont_respuestas: int - lleva el conteo de respuestas correctas que da el usuario.
+    // int puntos: Puntos totales del usuario
+    // int respondidas: Preguntas resueltas por el usuario
 
     /*  Métodos */
 
     // constructor
     constructor(materia){
 
-        this.preguntas = new Pregunta(materia); 
-        this.puntos = 0;
+        this.preguntas = new Pregunta(materia); //Crea una nueva instancia de preguntan
+        this.puntos = 0; 
         this.respondidas = 0;
-        this.materia = this.preguntas.getMateria();
+        this.materia = this.preguntas.getMateria(); //Asigna el nombre de la materia
 
-        // Se crean 5 preguntas de la materia correspondiente
-        this.cont_preguntas = this.preguntas.getSize();
-        //this.cont_preguntas = this.preguntas.getSize(); // Se inicia en 0 el contador de preguntas
+        this.cont_preguntas = this.preguntas.getSize(); //Obtiene la cantidad de preguntas
 
     }
 
@@ -75,7 +74,7 @@ class Validar {
       
         return array; //Devuelve un array mezclado
     }
-    
+
     //Método para guardar el puntaje por pregunta 
     sumarPuntaje(puntos){ 
         this.puntos = this.puntos + puntos; //Suma el puntaje de la pregunta al total

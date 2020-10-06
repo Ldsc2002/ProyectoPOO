@@ -33,17 +33,17 @@ class Pregunta{
         if (materia = 1) {
 
             this.materia = "Matemática"
-            this.preguntas = JSON.parse(sessionStorage.getItem("matematica")); // recopila preguntas de matemática de la base de datos y los agrega al array preguntas
+            this.preguntas = JSON.parse(sessionStorage.getItem("matematica")); //Obtiene los datos almacenados en el cache
 
         } else if (materia = 2) {
 
             this.materia = "Lenguaje";
-            this.preguntas = JSON.parse(sessionStorage.getItem("lenguaje")); // recopila preguntas de Lenguaje de la base de datos y los agrega al array preguntas
+            this.preguntas = JSON.parse(sessionStorage.getItem("lenguaje")); //Obtiene los datos almacenados en el cache
 
         } else if (materia = 3) {
 
             this.materia = "Ciencias";
-            this.preguntas = JSON.parse(sessionStorage.getItem("ciencias")); // recopila preguntas de Ciencias de la base de datos y los agrega al array preguntas
+            this.preguntas = JSON.parse(sessionStorage.getItem("ciencias")); //Obtiene los datos almacenados en el cache
         }
 
         this.cantidad = this.preguntas.length; // cantidad de preguntas
