@@ -39,8 +39,7 @@ class Controlador { //Clase de controlador
           }
     }
 
-    asignarMateria(materia) { //Constructor de la clase
-        //Atributos de la clase
+    asignarMateria(materia) { //Asigna la materia
         this.val = new Validar(materia); //Nueva instancia de validar
         this.materia = materia; //Materia actual
         this.preguntas = []; //Preguntas disponibles
