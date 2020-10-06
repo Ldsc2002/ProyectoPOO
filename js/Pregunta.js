@@ -30,17 +30,17 @@ class Pregunta{
         2. Lenguaje
         3. Ciencias*/
 
-        if (materia = 1) {
+        if (materia == 1) {
 
             this.materia = "Matemática"
             this.preguntas = JSON.parse(sessionStorage.getItem("matematica")); //Obtiene los datos almacenados en el cache
 
-        } else if (materia = 2) {
+        } else if (materia == 2) {
 
             this.materia = "Lenguaje";
             this.preguntas = JSON.parse(sessionStorage.getItem("lenguaje")); //Obtiene los datos almacenados en el cache
 
-        } else if (materia = 3) {
+        } else if (materia == 3) {
 
             this.materia = "Ciencias";
             this.preguntas = JSON.parse(sessionStorage.getItem("ciencias")); //Obtiene los datos almacenados en el cache

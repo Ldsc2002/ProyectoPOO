@@ -29,11 +29,9 @@ class Validar {
     constructor(materia){
 
         this.preguntas = new Pregunta(materia); //Crea una nueva instancia de preguntan
-        console.log(materia)
         this.puntos = 0; 
         this.respondidas = 0;
         this.materia = this.preguntas.getMateria(); //Asigna el nombre de la materia
-        console.log(this.materia)
         this.cont_preguntas = this.preguntas.getSize(); //Obtiene la cantidad de preguntas
 
     }
