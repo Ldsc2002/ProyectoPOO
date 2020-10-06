@@ -16,18 +16,22 @@ procesar los datos de los archivos CSV.
 
 class CargaArchivos {
     constructor() { //Constructor de la clase
-        var xmlhttp;
+        var xmlhttp1, xmlhttp2, xmlhttp3;
         let preguntas;
 
         if (window.XMLHttpRequest) { //Verificar compatibilidad 
-            xmlhttp = new XMLHttpRequest();
+            xmlhttp1 = new XMLHttpRequest();
+            xmlhttp2 = new XMLHttpRequest();
+            xmlhttp3 = new XMLHttpRequest();
         } else { //En caso de que el usuario este usando una versión incompatible
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); //Método legacy
+            xmlhttp1 = new ActiveXObject("Microsoft.XMLHTTP"); //Método legacy
+            xmlhttp2 = new ActiveXObject("Microsoft.XMLHTTP"); //Método legacy
+            xmlhttp3 = new ActiveXObject("Microsoft.XMLHTTP"); //Método legacy
         }
         
-        xmlhttp.onreadystatechange = function() { //Verifica que la página este lista para carga el archivo
+        xmlhttp1.onreadystatechange = function() { //Verifica que la página este lista para carga el archivo
             if (this.readyState == 4 && this.status == 200) {
-                var text = xmlhttp.responseText;
+                var text = xmlhttp1.responseText;
         
                 Papa.parse(text, { //Procesa los datos com PapaParse
                     complete: function(results) {
@@ -43,19 +47,10 @@ class CargaArchivos {
                 });
             }
         }
-
-        xmlhttp.open("GET", "db/matematica.csv", true); //Procesar archivo matematica.csv
-        xmlhttp.send(); //Manda la solucitud
-
-        if (window.XMLHttpRequest) { //Verificar compatibilidad 
-            xmlhttp = new XMLHttpRequest();
-        } else { //En caso de que el usuario este usando una versión incompatible
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); //Método legacy
-        }
         
-        xmlhttp.onreadystatechange = function() { //Verifica que la página este lista para carga el archivo
+        xmlhttp2.onreadystatechange = function() { //Verifica que la página este lista para carga el archivo
             if (this.readyState == 4 && this.status == 200) {
-                var text = xmlhttp.responseText;
+                var text = xmlhttp2.responseText;
         
                 Papa.parse(text, { //Procesa los datos com PapaParse
                     complete: function(results) {
@@ -72,18 +67,9 @@ class CargaArchivos {
             }
         }
 
-        xmlhttp.open("GET", "db/lenguaje.csv", true); //Procesar archivo lenguaje.csv
-        xmlhttp.send(); //Manda la solicitud
-
-        if (window.XMLHttpRequest) { //Verificar compatibilidad 
-            xmlhttp = new XMLHttpRequest();
-        } else { //En caso de que el usuario este usando una versión incompatible
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); //Método legacy
-        }
-        
-        xmlhttp.onreadystatechange = function() { //Verifica que la página este lista para carga el archivo
+        xmlhttp3.onreadystatechange = function() { //Verifica que la página este lista para carga el archivo
             if (this.readyState == 4 && this.status == 200) {
-                var text = xmlhttp.responseText;
+                var text = xmlhttp3.responseText;
         
                 Papa.parse(text, { //Procesa los datos com PapaParse
                     complete: function(results) {
@@ -99,9 +85,15 @@ class CargaArchivos {
                 });
             }
         }
+
+        xmlhttp1.open("GET", "db/matematica.csv", true); //Procesar archivo matematica.csv
+        xmlhttp1.send(); //Manda la solucitud
         
-        xmlhttp.open("GET", "db/ciencias.csv", true); //Procesar el archivo ciencias.csv
-        xmlhttp.send(); //Manda la solicitud
+        xmlhttp2.open("GET", "db/lenguaje.csv", true); //Procesar archivo lenguaje.csv
+        xmlhttp2.send(); //Manda la solicitud
+
+        xmlhttp3.open("GET", "db/ciencias.csv", true); //Procesar el archivo ciencias.csv
+        xmlhttp3.send(); //Manda la solicitud
 
     }
 }
