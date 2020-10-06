@@ -6,7 +6,7 @@ Autores:
 - Jóse Lucero: 20306
 - Diego Córdova: 20212
 
-Última modificación: 2020-10-03
+Última modificación: 2020-10-05
 
 Implementa todas las funciones que se comunican con el controlador
 para implementar las preguntas y la calificación de las mismas.
@@ -18,7 +18,7 @@ class Validar {
     /*  Atributos   */
 
     // String materia: identifica la materia
-    // array preguntas: guarda las preguntas de la materia
+    // Pregunta preguntas: Objeto de la clase pregunta que contiene las preguntas de una materia
     // int cont_preguntas: Lleva el conteo de las preguntas que se le hacen al usuario.
     // int cont_respuestas: int - lleva el conteo de respuestas correctas que da el usuario.
 
@@ -26,8 +26,8 @@ class Validar {
 
     // constructor
     constructor(materia){
-        this.preguntas = new Pregunta(materia)
 
+        this.preguntas = new Pregunta(materia); 
         this.puntos = 0;
         this.respondidas = 0;
         this.materia = this.preguntas.getMateria();
