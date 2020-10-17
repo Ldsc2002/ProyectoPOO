@@ -151,7 +151,7 @@ class Controlador { //Clase de controlador
         }
 
         if(resultados[2] != 0) { //Verifica que el usuario haya completado la materia
-            document.getElementById("resCie").innerHTML = resultados[3]; //Cambia el valor
+            document.getElementById("resCie").innerHTML = resultados[2]; //Cambia el valor
         }
     }
 
