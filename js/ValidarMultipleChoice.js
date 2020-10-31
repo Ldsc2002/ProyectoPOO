@@ -28,11 +28,11 @@ class Validar extends Validar {
     // constructor
     constructor(materia){
 
-        this.preguntas = new PreguntaMultipleChoice(materia); //Crea una nueva instancia de preguntan
-        this.puntos = 0; 
-        this.respondidas = 0;
-        this.materia = this.preguntas.getMateria(); //Asigna el nombre de la materia
-        this.cont_preguntas = this.preguntas.getSize(); //Obtiene la cantidad de preguntas
+        super(preguntas) = new PreguntaMultipleChoice(materia); //Crea una nueva instancia de preguntan
+        super(puntos) = 0; 
+        super(respondidas) = 0;
+        super(materia) = this.preguntas.getMateria(); //Asigna el nombre de la materia
+        super(cont_preguntas) = this.preguntas.getSize(); //Obtiene la cantidad de preguntas
 
     }
 
