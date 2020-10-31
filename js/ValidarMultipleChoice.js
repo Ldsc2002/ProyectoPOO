@@ -27,7 +27,8 @@ class ValidarMultipleChoice extends Validar {
 
     // constructor
     constructor(materia) {
-        this.preguntas = new PreguntaMultipleChoice(materia)
+        console.log("prueba");
+        this.preguntas = new PreguntaMultipleChoice(materia);
         super(this.preguntas); //Crea una nueva instancia de preguntan
     }
 
