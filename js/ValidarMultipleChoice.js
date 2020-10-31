@@ -26,8 +26,8 @@ class ValidarMultipleChoice extends Validar {
     /*  Métodos */
 
     // constructor
-    constructor(materia){
-        console.log("Instancia creada")
+    constructor(materia) {
+        console.log("Instancia creada");
         super(preguntas) = new PreguntaMultipleChoice(materia); //Crea una nueva instancia de preguntan
         super(puntos) = 0; 
         super(respondidas) = 0;
