@@ -28,11 +28,11 @@ class ValidarMultipleChoice extends Validar {
     // constructor
     constructor(materia) {
         console.log("Instancia creada");
-        super(preguntas) = new PreguntaMultipleChoice(materia); //Crea una nueva instancia de preguntan
-        super(puntos) = 0; 
-        super(respondidas) = 0;
-        super(materia) = super(preguntas).getMateria(); //Asigna el nombre de la materia
-        super(cont_preguntas) = super(preguntas).getSize(); //Obtiene la cantidad de preguntas
+        this.preguntas = new PreguntaMultipleChoice(materia); //Crea una nueva instancia de preguntan
+        this.puntos = 0; 
+        this.respondidas = 0;
+        this.materia = this.preguntas.getMateria(); //Asigna el nombre de la materia
+        this.cont_preguntas = this.preguntas.getSize(); //Obtiene la cantidad de preguntas
 
     }
 
@@ -41,11 +41,11 @@ class ValidarMultipleChoice extends Validar {
         var pregunta = preg - 1; // Se le resta 1 al parámetro para que esté acorde a la indentación de los arrays
         var ret = []; // array que guardará el retorno
 
-        ret.push(super(preguntas).getPregunta(pregunta)); // Se añade la respuesta de la pregunta corrspondiente a ret
-        ret.push(super(preguntas).getRespuesta(pregunta)); // Se añade la respuesta de la pregunta correspondiente a ret
+        ret.push(this.preguntas.getPregunta(pregunta)); // Se añade la respuesta de la pregunta corrspondiente a ret
+        ret.push(this.preguntas.getRespuesta(pregunta)); // Se añade la respuesta de la pregunta correspondiente a ret
 
         // Se añaden las 3 respuestas incorrectas de la pregunta correspondiente a ret
-        let temp = super(preguntas).getIncorrect(pregunta);
+        let temp = this.preguntas.getIncorrect(pregunta);
         
         for (var i = 0; i < temp.length; i++){
             ret.push(temp[i]);
