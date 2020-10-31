@@ -13,7 +13,7 @@ para implementar las preguntas y la calificación de las mismas.
 ******************************************************************/
 
 // Clase Validar
-class ValidarMultipleChoice {
+class ValidarMultipleChoice extends Validar {
 
     /*  Atributos   */
 
