@@ -40,7 +40,7 @@ class Controlador { //Clase de controlador
     }
 
     asignarMateria(materia) { //Asigna la materia
-        this.val = new Validar(materia); //Nueva instancia de validar
+        this.val = new ValidarMultipleChoice(materia); //Nueva instancia de validar
         this.materia = materia; //Materia actual
         this.preguntas = []; //Preguntas disponibles
         this.count = 0; //Cuenta de preguntas hechas por el usuario

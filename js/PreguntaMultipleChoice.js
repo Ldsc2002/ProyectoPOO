@@ -12,7 +12,7 @@ Implementa las preguntas que se le pueden presentar al usuario.
 ******************************************************************/
 
 // Clase Pregunta
-class Pregunta{
+class PreguntaMultipleChoice {
 
     /*  Atributos   */
 
