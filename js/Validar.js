@@ -1,8 +1,11 @@
 class Validar {
-    constructor(){
-        if (this.constructor == Validar) {
-            throw new Error ("La clase abstracta no se puede instanciar");
-        }
+    constructor(preguntas){
+        this.preguntas = preguntas;
+        this.puntos = 0; 
+        this.respondidas = 0;
+        this.materia = this.preguntas.getMateria(); //Asigna el nombre de la materia
+        this.cont_preguntas = this.preguntas.getSize(); //Obtiene la cantidad de preguntas
+
     }
 
     // Método que devuelve un array con: la pregunta, la respuesta correcta y tres respuestas incorrectas de una de las preguntas guardadas en el atributo preguntas

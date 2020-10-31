@@ -27,13 +27,7 @@ class ValidarMultipleChoice extends Validar {
 
     // constructor
     constructor(materia) {
-        console.log("Instancia creada");
-        this.preguntas = new PreguntaMultipleChoice(materia); //Crea una nueva instancia de preguntan
-        this.puntos = 0; 
-        this.respondidas = 0;
-        this.materia = this.preguntas.getMateria(); //Asigna el nombre de la materia
-        this.cont_preguntas = this.preguntas.getSize(); //Obtiene la cantidad de preguntas
-
+        super(new PreguntaMultipleChoice(materia)); //Crea una nueva instancia de preguntan
     }
 
     // Método que devuelve un array con: la pregunta, la respuesta correcta y tres respuestas incorrectas de una de las preguntas guardadas en el atributo preguntas
