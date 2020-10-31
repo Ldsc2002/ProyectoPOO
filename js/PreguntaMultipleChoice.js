@@ -12,7 +12,7 @@ Implementa las preguntas que se le pueden presentar al usuario.
 ******************************************************************/
 
 // Clase Pregunta
-class PreguntaMultipleChoice {
+class PreguntaMultipleChoice extends Pregunta {
 
     /*  Atributos   */
 
@@ -30,49 +30,24 @@ class PreguntaMultipleChoice {
         2. Lenguaje
         3. Ciencias*/
 
+        let mat, preguntas;
+
         if (materia == 1) {
 
-            this.materia = "Matemática"
-            this.preguntas = JSON.parse(sessionStorage.getItem("matematica")); //Obtiene los datos almacenados en el cache
+            mat = "Matemática"
+            preguntas = JSON.parse(sessionStorage.getItem("matematica")); //Obtiene los datos almacenados en el cache
 
         } else if (materia == 2) {
 
-            this.materia = "Lenguaje";
-            this.preguntas = JSON.parse(sessionStorage.getItem("lenguaje")); //Obtiene los datos almacenados en el cache
+            mat = "Lenguaje";
+            preguntas = JSON.parse(sessionStorage.getItem("lenguaje")); //Obtiene los datos almacenados en el cache
 
         } else if (materia == 3) {
 
-            this.materia = "Ciencias";
-            this.preguntas = JSON.parse(sessionStorage.getItem("ciencias")); //Obtiene los datos almacenados en el cache
+            mat = "Ciencias";
+            preguntas = JSON.parse(sessionStorage.getItem("ciencias")); //Obtiene los datos almacenados en el cache
         }
 
-        this.cantidad = this.preguntas.length; // cantidad de preguntas
+        super(mat, preguntas)
     }
-
-   /* Getters   */
-
-   // materia
-   getMateria() {
-       return this.materia;
-   }
-
-   // respuesta
-   getRespuesta(x){
-       return this.preguntas[x][1];
-   }
-
-   // pregunta
-   getPregunta(x){
-       return (this.preguntas[x][0]);
-   }
-
-   // incorrect
-   getIncorrect(x){
-       return [this.preguntas[x][2], this.preguntas[x][3], this.preguntas[x][4]];
-   }
-
-   // size
-   getSize() {
-       return this.cantidad;
-   }
 }
