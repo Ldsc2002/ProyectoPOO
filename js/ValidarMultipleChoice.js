@@ -27,7 +27,8 @@ class ValidarMultipleChoice extends Validar {
 
     // constructor
     constructor(materia) {
-        super(new PreguntaMultipleChoice(materia)); //Crea una nueva instancia de preguntan
+        this.preguntas = new PreguntaMultipleChoice(materia)
+        super(this.preguntas); //Crea una nueva instancia de preguntan
     }
 
     // Método que devuelve un array con: la pregunta, la respuesta correcta y tres respuestas incorrectas de una de las preguntas guardadas en el atributo preguntas
