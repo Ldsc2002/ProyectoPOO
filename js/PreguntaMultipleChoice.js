@@ -1,14 +1,15 @@
 /******************************************************************
-Calificaciones.js
+PreguntaMultipleChoice.js
 Autores: 
 - Luis Santos: 20226
 - Paola Contreras: 20213
 - Jóse Lucero: 20306
 - Diego Córdova: 20212
 
-Última modificación: 2020-10-05
+Última modificación: 2020-10-31
 
-Implementa las preguntas que se le pueden presentar al usuario. 
+Implementa las preguntas de selección multiple que se le pueden 
+presentar al usuario. Extiende la clase pregunta.
 ******************************************************************/
 
 // Clase Pregunta
@@ -23,7 +24,7 @@ class PreguntaMultipleChoice extends Pregunta {
     /*  Métodos */
 
     // constructor
-    constructor(materia){
+    constructor(materia){ //Constructor de la clase
 
         /* Se llenan las variables de instancia dependiende de la materia dada como parámetro
         1. Matemática
@@ -32,22 +33,22 @@ class PreguntaMultipleChoice extends Pregunta {
 
         let mat, preguntas;
 
-        if (materia == 1) {
+        if (materia == 1) { //Si la matetia es matematica
 
             mat = "Matemática"
             preguntas = JSON.parse(sessionStorage.getItem("matematica")); //Obtiene los datos almacenados en el cache
 
-        } else if (materia == 2) {
+        } else if (materia == 2) { //Si la materia es lenguaje
 
             mat = "Lenguaje";
             preguntas = JSON.parse(sessionStorage.getItem("lenguaje")); //Obtiene los datos almacenados en el cache
 
-        } else if (materia == 3) {
+        } else if (materia == 3) { //Si la materia es ciencias
 
             mat = "Ciencias";
             preguntas = JSON.parse(sessionStorage.getItem("ciencias")); //Obtiene los datos almacenados en el cache
         }
 
-        super(mat, preguntas)
+        super(mat, preguntas) //Llama el constructor de pregunta
     }
 }

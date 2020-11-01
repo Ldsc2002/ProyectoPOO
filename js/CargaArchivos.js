@@ -1,5 +1,5 @@
 /******************************************************************
-Controlador.js
+CargaArchivos.js
 Autores: 
 - Luis Santos: 20226
 - Paola Contreras: 20213

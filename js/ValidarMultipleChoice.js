@@ -1,18 +1,18 @@
 /******************************************************************
-Validar.js
+ValidarMultipleChoice.js
 Autores: 
 - Luis Santos: 20226
 - Paola Contreras: 20213
 - Jóse Lucero: 20306
 - Diego Córdova: 20212
 
-Última modificación: 2020-10-05
+Última modificación: 2020-10-31
 
-Implementa todas las funciones que se comunican con el controlador
-para implementar las preguntas y la calificación de las mismas.
+Extiente la clase validar. Implementa los métodos de validar para 
+preguntas de selección multiple.
 ******************************************************************/
 
-// Clase Validar
+// Clase ValidarMultipleChoice
 class ValidarMultipleChoice extends Validar {
 
     /*  Atributos   */
@@ -26,10 +26,9 @@ class ValidarMultipleChoice extends Validar {
     /*  Métodos */
 
     // constructor
-    constructor(materia) {
+    constructor(materia) { //Constructor de la clase
         var temp = new PreguntaMultipleChoice(materia);
-        console.log("prueba");
-        super(temp); //Crea una nueva instancia de preguntan
+        super(temp); //Llama al constructor de validar
     }
 
     // Método que devuelve un array con: la pregunta, la respuesta correcta y tres respuestas incorrectas de una de las preguntas guardadas en el atributo preguntas

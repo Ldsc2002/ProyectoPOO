@@ -1,6 +1,21 @@
-class Validar {
+/******************************************************************
+Validar.js
+Autores: 
+- Luis Santos: 20226
+- Paola Contreras: 20213
+- Jóse Lucero: 20306
+- Diego Córdova: 20212
+
+Última modificación: 2020-10-31
+
+Implementa todas las funciones que se comunican con el controlador
+para implementar las preguntas y la calificación de las mismas.
+Se utiliza como una clase abstracta, ya que nunca se instancia.
+******************************************************************/
+
+class Validar { //Clase validar
     constructor(preguntas){
-        this.preguntas = preguntas;
+        this.preguntas = preguntas; //Preguntas
         this.puntos = 0; 
         this.respondidas = 0;
         this.materia = this.preguntas.getMateria(); //Asigna el nombre de la materia
@@ -8,8 +23,8 @@ class Validar {
 
     }
 
-    // Método que devuelve un array con: la pregunta, la respuesta correcta y tres respuestas incorrectas de una de las preguntas guardadas en el atributo preguntas
-    preguntaList() {
+    //La manera en la que da la pregunta puede variar, el método no esta definido
+    preguntaList() { //Se debe sobreescribir el método en la clase que extiende a validar
         throw new Error ("El método preguntaList() debe ser implementado")
     }
 
