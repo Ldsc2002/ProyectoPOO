@@ -147,7 +147,7 @@ class Controlador { //Clase de controlador
         }
 
         if(resultados[1] != 0) { //Verifica que el usuario haya completado la materia
-            document.getElementById("resLan").innerHTML = resultados[1]; //Cambia el valor
+            document.getElementById("resLen").innerHTML = resultados[1]; //Cambia el valor
         }
 
         if(resultados[2] != 0) { //Verifica que el usuario haya completado la materia
