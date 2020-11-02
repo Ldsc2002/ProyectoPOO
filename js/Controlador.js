@@ -61,7 +61,7 @@ class Controlador { //Clase de controlador
             this.count++; //Suma uno a count
         } else if (this.count < this.preguntas.length) { //Si aun hay preguntas
             let x = this.count; //Copia el valor de this.count
-            document.getElementById("preguntaOut").innerHTML = this.preguntas[x][0]; //Obtiene la pregunta
+            document.getElementById("preguntaOut").innerHTML = (x + 1) + ". " + this.preguntas[x][0]; //Obtiene la pregunta
             document.getElementById("materiaOut").innerHTML = this.val.getMateria(); //Obtiene la materia
 
             let temp = this.preguntas[x].slice(); //Copia la pregunta y sus respuestas al array
