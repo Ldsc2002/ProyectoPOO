@@ -6,7 +6,7 @@ Autores:
 - Jóse Lucero: 20306
 - Diego Córdova: 20212
 
-Última modificación: 2020-10-31
+Última modificación: 2020-11-4
 
 Extiente la clase validar. Implementa los métodos de validar para 
 preguntas de selección multiple.

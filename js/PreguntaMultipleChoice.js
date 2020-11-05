@@ -6,7 +6,7 @@ Autores:
 - Jóse Lucero: 20306
 - Diego Córdova: 20212
 
-Última modificación: 2020-10-31
+Última modificación: 2020-11-4
 
 Implementa las preguntas de selección multiple que se le pueden 
 presentar al usuario. Extiende la clase pregunta.
@@ -50,5 +50,17 @@ class PreguntaMultipleChoice extends Pregunta {
         }
 
         super(mat, preguntas) //Llama el constructor de pregunta
+    }
+
+    getRespuesta(x){ //Devuelve la respuesta
+        return this.preguntas[x][1];
+    }
+
+    getPregunta(x){ //Devuelve la pregunta
+        return (this.preguntas[x][0]);
+    }
+
+    getIncorrect(x){ //Devuelve las preguntas incorrectas
+        return [this.preguntas[x][2], this.preguntas[x][3], this.preguntas[x][4]];
     }
 }

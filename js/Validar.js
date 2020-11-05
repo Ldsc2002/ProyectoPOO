@@ -6,14 +6,14 @@ Autores:
 - Jóse Lucero: 20306
 - Diego Córdova: 20212
 
-Última modificación: 2020-10-31
+Última modificación: 2020-11-4
 
 Implementa todas las funciones que se comunican con el controlador
 para implementar las preguntas y la calificación de las mismas.
 Se utiliza como una clase abstracta, ya que nunca se instancia.
 ******************************************************************/
 
-class Validar { //Clase validar
+class Validar { //Clase abstracta validar
     constructor(preguntas){
         if (this.constructor == Validar) {
             throw new Error("No se puede instanciar una clase abstracta.")
