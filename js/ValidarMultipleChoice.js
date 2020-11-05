@@ -32,7 +32,7 @@ class ValidarMultipleChoice extends Validar {
     }
 
     // Método que devuelve un array con: la pregunta, la respuesta correcta y tres respuestas incorrectas de una de las preguntas guardadas en el atributo preguntas
-    preguntaList(preg) {
+    preguntaList(preg) { //Override del método
         var pregunta = preg - 1; // Se le resta 1 al parámetro para que esté acorde a la indentación de los arrays
         var ret = []; // array que guardará el retorno
 

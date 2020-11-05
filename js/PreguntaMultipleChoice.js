@@ -52,15 +52,15 @@ class PreguntaMultipleChoice extends Pregunta {
         super(mat, preguntas) //Llama el constructor de pregunta
     }
 
-    getRespuesta(x){ //Devuelve la respuesta
+    getRespuesta(x){ //Override del método, devuelve la respuesta
         return this.preguntas[x][1];
     }
 
-    getPregunta(x){ //Devuelve la pregunta
+    getPregunta(x){ //Override del método, devuelve la pregunta
         return (this.preguntas[x][0]);
     }
 
-    getIncorrect(x){ //Devuelve las preguntas incorrectas
+    getIncorrect(x){ //Override del método, devuelve las preguntas incorrectas
         return [this.preguntas[x][2], this.preguntas[x][3], this.preguntas[x][4]];
     }
 }

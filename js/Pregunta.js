@@ -16,7 +16,7 @@ ya que nunca se instancia.
 //Clase abstracta Pregunta
 class Pregunta {
     constructor(mat, preguntas) { //Constructor de la clase
-        if (this.constructor == Validar) {
+        if (this.constructor == Pregunta) {
             throw new Error("No se puede instanciar una clase abstracta.")
         } else {
             this.materia = mat; //Define la materia
