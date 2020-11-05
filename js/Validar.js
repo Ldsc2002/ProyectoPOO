@@ -15,15 +15,11 @@ Se utiliza como una clase abstracta, ya que nunca se instancia.
 
 class Validar { //Clase validar
     constructor(preguntas){
-        if (this.constructor == Validar) {
-            throw new Error("No se puede instanciar una clase abstracta.")
-        } else {
-            this.preguntas = preguntas; //Preguntas
-            this.puntos = 0; 
-            this.respondidas = 0;
-            this.materia = this.preguntas.getMateria(); //Asigna el nombre de la materia
-            this.cont_preguntas = this.preguntas.getSize(); //Obtiene la cantidad de preguntas    
-        }
+        this.preguntas = preguntas; //Preguntas
+        this.puntos = 0; 
+        this.respondidas = 0;
+        this.materia = this.preguntas.getMateria(); //Asigna el nombre de la materia
+        this.cont_preguntas = this.preguntas.getSize(); //Obtiene la cantidad de preguntas
     }
 
     //La manera en la que da la pregunta puede variar, el método no esta definido
