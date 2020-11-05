@@ -30,15 +30,15 @@ class Pregunta {
     }
 
     getRespuesta(x){ //Método abstracto, devuelve la respuesta
-        throw new Error ("El método preguntaList() debe ser implementado")
+        throw new Error ("El método getRespuesta() debe ser implementado")
     }
 
     getPregunta(x){ //Método abstracto, devuelve la pregunta
-        throw new Error ("El método preguntaList() debe ser implementado")
+        throw new Error ("El método getPregunta() debe ser implementado")
     }
 
     getIncorrect(x){ //Método abstracto, devuelve las preguntas incorrectas
-        throw new Error ("El método preguntaList() debe ser implementado")
+        throw new Error ("El método getIncorrect() debe ser implementado")
     }
 
     getSize() { //Devuelve la cantidad de preguntas
