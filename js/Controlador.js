@@ -1,10 +1,11 @@
 /******************************************************************
 Controlador.js
-Autores: 
+Autores:
 - Luis Santos: 20226
 - Paola Contreras: 20213
 - Jóse Lucero: 20306
 - Diego Córdova: 20212
+- José Díaz: 20396
 
 Última modificación: 2020-11-2
 
@@ -30,7 +31,7 @@ class Controlador { //Clase de controlador
 
         var elems = document.querySelectorAll('.sidenav'); //Navegación movil
         var instances = M.Sidenav.init(elems);
-    
+
         var elems = document.querySelectorAll('.collapsible'); //Colapsable
         var instances = M.Collapsible.init(elems);
 
@@ -56,7 +57,7 @@ class Controlador { //Clase de controlador
     newPregunta() { //Cambia los valores del HTML con los de la pregunta
         if (this.count == this.preguntas.length) { //Si ya se respondieron todas las preguntas
             document.getElementById("materiaOut").innerHTML = "Felicidades! Tu nota es " + this.val.notaTotal(); //Mensaje al finalizar el juego
-            document.getElementById("preguntaOut").innerHTML = "Has completado todas las preguntas! Selecciona otra materia para seguir aprendiendo"; 
+            document.getElementById("preguntaOut").innerHTML = "Has completado todas las preguntas! Selecciona otra materia para seguir aprendiendo";
             this.setCalificacion(this.val.notaTotal()); //Obteniene la nota y la almacena
             this.count++; //Suma uno a count
         } else if (this.count < this.preguntas.length) { //Si aun hay preguntas
@@ -78,7 +79,9 @@ class Controlador { //Clase de controlador
             document.getElementById("Radio3").value = temp[2];
             document.getElementById("Opcion4").innerHTML = temp[3];
             document.getElementById("Radio4").value = temp[3];
-                
+            document.getElementById("Opcion4").innerHTML = temp[4];
+            document.getElementById("Radio4").value = temp[4];
+
             this.respuesta = this.preguntas[x][1]; //Asigna la respuesta de la pregunta a this.pregunta
             this.puntos = 100; //La nota inicial para la pregunta
             this.count++; //Suma uno a count
@@ -90,7 +93,7 @@ class Controlador { //Clase de controlador
     checkRespuesta() { //Revisa si la respuesta es correcta y pasa a la siguiente pregunta
         let form = document.getElementsByName("group1"); //Obtiene los elementos del HTML donde estan las respuestas
 
-        for (let i = 0; i < form.length; i++) { //Verifica todos los elementos 
+        for (let i = 0; i < form.length; i++) { //Verifica todos los elementos
             if (form[i].checked) { //Revisa si es la opción seleccionada por el usuario
                 if (form[i].value == this.respuesta) { //Revisa si es la respuesta correcta
                     M.toast({html: "Respuesta correcta!"});
@@ -110,24 +113,24 @@ class Controlador { //Clase de controlador
         let navigateIndex = current.findIndex(function(element) { //Elemento actual
             return element === load;
         });
-    
+
         current.splice(navigateIndex, 1); //Quita el actual de la lista
-    
+
         for (let i=0; i < current.length; i++) { //Por todas las páginas menos la actual
             let currentPage = document.querySelector(current[i]); //Selecciona el elemento que coincide con ese ID
-    
+
             currentPage.classList.add("pageOut"); //Añade la clase pageOut
             currentPage.classList.remove("pageIn"); //Quita la clase pageIn
-    
+
             setTimeout(navigateCurrent, 500); //Espera 500ms para llamar a navigateCurrent
-    
+
             function navigateCurrent() {
             currentPage.setAttribute("style", "display:none"); //Esconde el elemento
             }
         }
-    
+
         setTimeout(navigate, 500); //Espera 500ms para llamar a navigate
-    
+
         function navigate() { //Navega a la nueva página
             navigateTo.setAttribute("style", "display:block"); //Hace visible el elemento
             navigateTo.classList.add("pageIn"); //Añade la clase pageIn
@@ -152,6 +155,10 @@ class Controlador { //Clase de controlador
 
         if(resultados[2] != 0) { //Verifica que el usuario haya completado la materia
             document.getElementById("resCie").innerHTML = resultados[2]; //Cambia el valor
+        }
+
+        if(resultados[3] != 0) { //Verifica que el usuario haya completado la materia
+            document.getElementById("resSos").innerHTML = resultados[3]; //Cambia el valor
         }
     }
 

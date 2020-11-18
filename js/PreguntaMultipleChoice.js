@@ -1,14 +1,15 @@
 /******************************************************************
 PreguntaMultipleChoice.js
-Autores: 
+Autores:
 - Luis Santos: 20226
 - Paola Contreras: 20213
 - Jóse Lucero: 20306
 - Diego Córdova: 20212
+- José Díaz: 20396
 
 Última modificación: 2020-11-4
 
-Implementa las preguntas de selección multiple que se le pueden 
+Implementa las preguntas de selección multiple que se le pueden
 presentar al usuario. Extiende la clase pregunta.
 ******************************************************************/
 
@@ -47,6 +48,11 @@ class PreguntaMultipleChoice extends Pregunta {
 
             mat = "Ciencias";
             preguntas = JSON.parse(sessionStorage.getItem("ciencias")); //Obtiene los datos almacenados en el cache
+
+        } else if (materia == 4) { //Si la materia es sociales
+
+            mat = "Sociales";
+            preguntas = JSON.parse(sessionStorage.getItem("sociales")); //Obtiene los datos almacenados en el cache
         }
 
         super(mat, preguntas) //Llama el constructor de pregunta

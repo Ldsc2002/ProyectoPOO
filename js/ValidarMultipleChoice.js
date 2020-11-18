@@ -1,14 +1,15 @@
 /******************************************************************
 ValidarMultipleChoice.js
-Autores: 
+Autores:
 - Luis Santos: 20226
 - Paola Contreras: 20213
 - Jóse Lucero: 20306
 - Diego Córdova: 20212
+- José Díaz: 20396
 
 Última modificación: 2020-11-4
 
-Extiente la clase validar. Implementa los métodos de validar para 
+Extiente la clase validar. Implementa los métodos de validar para
 preguntas de selección multiple.
 ******************************************************************/
 
@@ -41,7 +42,7 @@ class ValidarMultipleChoice extends Validar {
 
         // Se añaden las 3 respuestas incorrectas de la pregunta correspondiente a ret
         let temp = this.preguntas.getIncorrect(pregunta);
-        
+
         for (var i = 0; i < temp.length; i++){
             ret.push(temp[i]);
         }

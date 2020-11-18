@@ -1,10 +1,11 @@
 /******************************************************************
 Pregunta.js
-Autores: 
+Autores:
 - Luis Santos: 20226
 - Paola Contreras: 20213
 - Jóse Lucero: 20306
 - Diego Córdova: 20212
+- José Díaz: 20396
 
 Última modificación: 2020-11-4
 
