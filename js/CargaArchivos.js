@@ -118,7 +118,7 @@ class CargaArchivos {
         xmlhttp3.send(); //Manda la solicitud
 
         xmlhttp4.open("GET", "db/sociales.csv", true); //Procesar el archivo sociales.csv
-        xmlhttp3.send(); //Manda la solicitud
+        xmlhttp4.send(); //Manda la solicitud
 
     }
 }
