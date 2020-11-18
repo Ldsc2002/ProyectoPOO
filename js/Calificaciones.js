@@ -19,7 +19,7 @@ class Calificaciones {
         let lenguaje = window.localStorage.getItem("resLen"); //Calificacion de lenguaje
         let ciencia = window.localStorage.getItem("resCie"); //Calificacion de ciencia
         let sociales = window.localStrorage.getItem("resSos"); //Calificacion de sociales
-        let result = [0, 0, 0,0];
+        let result = [0, 0, 0, 0];
 
         if (window.localStorage.getItem("resMat") != null) { //Verifica que haya algo almacenado
             result[0] = matematica;
@@ -33,11 +33,9 @@ class Calificaciones {
             result[2] = ciencia;
         }
 
-        if)window.localStorage.getItem("resSos") != null) { //Verifica que haya algo almacenado
+        if (window.localStorage.getItem("resSos") != null) { //Verifica que haya algo almacenado
           result[3] = sociales;
         }
-
-
 
         return result; //Devuelve las calificaciones
     }
