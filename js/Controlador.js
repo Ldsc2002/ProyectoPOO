@@ -79,8 +79,6 @@ class Controlador { //Clase de controlador
             document.getElementById("Radio3").value = temp[2];
             document.getElementById("Opcion4").innerHTML = temp[3];
             document.getElementById("Radio4").value = temp[3];
-            document.getElementById("Opcion4").innerHTML = temp[4];
-            document.getElementById("Radio4").value = temp[4];
 
             this.respuesta = this.preguntas[x][1]; //Asigna la respuesta de la pregunta a this.pregunta
             this.puntos = 100; //La nota inicial para la pregunta
