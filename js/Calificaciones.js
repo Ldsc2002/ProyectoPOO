@@ -18,7 +18,7 @@ class Calificaciones {
         let matematica = window.localStorage.getItem("resMat"); //Calificacion de matematica
         let lenguaje = window.localStorage.getItem("resLen"); //Calificacion de lenguaje
         let ciencia = window.localStorage.getItem("resCie"); //Calificacion de ciencia
-        let sociales = window.localStrorage.getItem("resSos"); //Calificacion de sociales
+        let sociales = window.localStorage.getItem("resSos"); //Calificacion de sociales
         let result = [0, 0, 0, 0];
 
         if (window.localStorage.getItem("resMat") != null) { //Verifica que haya algo almacenado
@@ -34,7 +34,7 @@ class Calificaciones {
         }
 
         if (window.localStorage.getItem("resSos") != null) { //Verifica que haya algo almacenado
-          result[3] = sociales;
+            result[3] = sociales;
         }
 
         return result; //Devuelve las calificaciones
