@@ -53,10 +53,10 @@ class Controlador { //Clase de controlador
 
         let image = document.getElementById("personaje");
 
-        if (materia == 1) { //TODO change src
+        if (materia == 1) {
             image.src = "img/matematicas.png"
         } else if (materia == 2) {
-            image.src = "img/hello-icon-512.png" 
+            image.src = "img/idioma.png" 
         } else if (materia == 3) {
             image.src = "img/ciencias.png"
         } else if (materia == 4) {
