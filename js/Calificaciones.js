@@ -37,7 +37,7 @@ class Calificaciones {
             result[3] = sociales;
         }
 
-        return result; //Devuelve las calificaciones
+        return result; //Devuelve las calificaciones en un array
     }
 
     setCalificacion(materia, nota) { //Guarda la calificación de una materia
